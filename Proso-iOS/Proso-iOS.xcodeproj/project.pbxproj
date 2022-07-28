@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0823D5DD610BF4C8911A098F /* Pods_Proso_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D85B76EC65DDD18676860BC /* Pods_Proso_iOS.framework */; };
+		D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE98F2892AA76000C60F3 /* AppDelegate.swift */; };
+		D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE9912892AA76000C60F3 /* SceneDelegate.swift */; };
+		D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE9932892AA76000C60F3 /* ViewController.swift */; };
+		D45DE9992892AA77000C60F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45DE9982892AA77000C60F3 /* Assets.xcassets */; };
+		D45DE99C2892AA77000C60F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45DE99A2892AA77000C60F3 /* LaunchScreen.storyboard */; };
+		D45DE9A62892B112000C60F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9A52892B112000C60F3 /* SystemConfiguration.framework */; };
+		D45DE9A82892B119000C60F3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9A72892B119000C60F3 /* CoreLocation.framework */; };
+		D45DE9AA2892B11F000C60F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9A92892B11F000C60F3 /* QuartzCore.framework */; };
+		D45DE9AC2892B12D000C60F3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9AB2892B129000C60F3 /* libc++.tbd */; };
+		D45DE9AE2892B136000C60F3 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9AD2892B134000C60F3 /* libxml2.tbd */; };
+		D45DE9B02892B141000C60F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9AF2892B13C000C60F3 /* libsqlite3.tbd */; };
+		D45DE9F92892BECA000C60F3 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9F82892BECA000C60F3 /* DaumMap.framework */; };
+		D45DE9FA2892C196000C60F3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9A32892B10B000C60F3 /* OpenGLES.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		578893027E657D957566D666 /* Pods-Proso-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proso-iOS.release.xcconfig"; path = "Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		8D85B76EC65DDD18676860BC /* Pods_Proso_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proso_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45DE98C2892AA76000C60F3 /* Proso-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Proso-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45DE98F2892AA76000C60F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D45DE9912892AA76000C60F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D45DE9932892AA76000C60F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D45DE9982892AA77000C60F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D45DE99B2892AA77000C60F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D45DE99D2892AA77000C60F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D45DE9A32892B10B000C60F3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D45DE9A52892B112000C60F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D45DE9A72892B119000C60F3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D45DE9A92892B11F000C60F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D45DE9AB2892B129000C60F3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D45DE9AD2892B134000C60F3 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		D45DE9AF2892B13C000C60F3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D45DE9F52892B1E3000C60F3 /* Proso-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Proso-Bridging-Header.h"; sourceTree = "<group>"; };
+		D45DE9F62892B4AD000C60F3 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		D45DE9F82892BECA000C60F3 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		F60EBD28FB1A9FBB1FD1789F /* Pods-Proso-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proso-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D45DE9892892AA76000C60F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45DE9AC2892B12D000C60F3 /* libc++.tbd in Frameworks */,
+				D45DE9AA2892B11F000C60F3 /* QuartzCore.framework in Frameworks */,
+				D45DE9B02892B141000C60F3 /* libsqlite3.tbd in Frameworks */,
+				D45DE9A82892B119000C60F3 /* CoreLocation.framework in Frameworks */,
+				D45DE9FA2892C196000C60F3 /* OpenGLES.framework in Frameworks */,
+				D45DE9AE2892B136000C60F3 /* libxml2.tbd in Frameworks */,
+				0823D5DD610BF4C8911A098F /* Pods_Proso_iOS.framework in Frameworks */,
+				D45DE9F92892BECA000C60F3 /* DaumMap.framework in Frameworks */,
+				D45DE9A62892B112000C60F3 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		143D2B0603E8FC8048E2F8C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D45DE9F82892BECA000C60F3 /* DaumMap.framework */,
+				D45DE9F62892B4AD000C60F3 /* Metal.framework */,
+				D45DE9AF2892B13C000C60F3 /* libsqlite3.tbd */,
+				D45DE9AD2892B134000C60F3 /* libxml2.tbd */,
+				D45DE9AB2892B129000C60F3 /* libc++.tbd */,
+				D45DE9A92892B11F000C60F3 /* QuartzCore.framework */,
+				D45DE9A72892B119000C60F3 /* CoreLocation.framework */,
+				D45DE9A52892B112000C60F3 /* SystemConfiguration.framework */,
+				D45DE9A32892B10B000C60F3 /* OpenGLES.framework */,
+				8D85B76EC65DDD18676860BC /* Pods_Proso_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		706D623536C89205CBA9C074 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F60EBD28FB1A9FBB1FD1789F /* Pods-Proso-iOS.debug.xcconfig */,
+				578893027E657D957566D666 /* Pods-Proso-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D45DE9832892AA76000C60F3 = {
+			isa = PBXGroup;
+			children = (
+				D45DE9F42892B1C6000C60F3 /* Header */,
+				D45DE98E2892AA76000C60F3 /* Proso-iOS */,
+				D45DE98D2892AA76000C60F3 /* Products */,
+				706D623536C89205CBA9C074 /* Pods */,
+				143D2B0603E8FC8048E2F8C7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D45DE98D2892AA76000C60F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D45DE98C2892AA76000C60F3 /* Proso-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D45DE98E2892AA76000C60F3 /* Proso-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D45DE98F2892AA76000C60F3 /* AppDelegate.swift */,
+				D45DE9912892AA76000C60F3 /* SceneDelegate.swift */,
+				D45DE9932892AA76000C60F3 /* ViewController.swift */,
+				D45DE9982892AA77000C60F3 /* Assets.xcassets */,
+				D45DE99A2892AA77000C60F3 /* LaunchScreen.storyboard */,
+				D45DE99D2892AA77000C60F3 /* Info.plist */,
+			);
+			path = "Proso-iOS";
+			sourceTree = "<group>";
+		};
+		D45DE9F42892B1C6000C60F3 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D45DE9F52892B1E3000C60F3 /* Proso-Bridging-Header.h */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D45DE98B2892AA76000C60F3 /* Proso-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D45DE9A02892AA77000C60F3 /* Build configuration list for PBXNativeTarget "Proso-iOS" */;
+			buildPhases = (
+				0EF19C78F8174DF318FFA669 /* [CP] Check Pods Manifest.lock */,
+				D45DE9882892AA76000C60F3 /* Sources */,
+				D45DE9892892AA76000C60F3 /* Frameworks */,
+				D45DE98A2892AA76000C60F3 /* Resources */,
+				97772D3D1C10194C23D78351 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Proso-iOS";
+			productName = "Proso-iOS";
+			productReference = D45DE98C2892AA76000C60F3 /* Proso-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D45DE9842892AA76000C60F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D45DE98B2892AA76000C60F3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = D45DE9872892AA76000C60F3 /* Build configuration list for PBXProject "Proso-iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D45DE9832892AA76000C60F3;
+			productRefGroup = D45DE98D2892AA76000C60F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D45DE98B2892AA76000C60F3 /* Proso-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D45DE98A2892AA76000C60F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45DE99C2892AA77000C60F3 /* LaunchScreen.storyboard in Resources */,
+				D45DE9992892AA77000C60F3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EF19C78F8174DF318FFA669 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Proso-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97772D3D1C10194C23D78351 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D45DE9882892AA76000C60F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */,
+				D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */,
+				D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D45DE99A2892AA77000C60F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D45DE99B2892AA77000C60F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D45DE99E2892AA77000C60F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D45DE99F2892AA77000C60F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D45DE9A12892AA77000C60F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60EBD28FB1A9FBB1FD1789F /* Pods-Proso-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VT6KC94KM7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KakaoSDKAuth/KakaoSDKAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KakaoSDKCommon/KakaoSDKCommon.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KakaoSDKUser/KakaoSDKUser.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
+					"$(PROJECT_DIR)",
+					"/Users/changgyoseo/Projects/Proso-iOS/Proso-iOS/DaumMap.embeddedframework/Resources",
+				);
+				INFOPLIST_FILE = "Proso-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "pccommen.Proso-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Header/Proso-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D45DE9A22892AA77000C60F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 578893027E657D957566D666 /* Pods-Proso-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VT6KC94KM7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KakaoSDKAuth/KakaoSDKAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KakaoSDKCommon/KakaoSDKCommon.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KakaoSDKUser/KakaoSDKUser.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
+					"$(PROJECT_DIR)",
+					"/Users/changgyoseo/Projects/Proso-iOS/Proso-iOS/DaumMap.embeddedframework/Resources",
+				);
+				INFOPLIST_FILE = "Proso-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "pccommen.Proso-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Header/Proso-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D45DE9872892AA76000C60F3 /* Build configuration list for PBXProject "Proso-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D45DE99E2892AA77000C60F3 /* Debug */,
+				D45DE99F2892AA77000C60F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D45DE9A02892AA77000C60F3 /* Build configuration list for PBXNativeTarget "Proso-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D45DE9A12892AA77000C60F3 /* Debug */,
+				D45DE9A22892AA77000C60F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D45DE9842892AA76000C60F3 /* Project object */;
+}
