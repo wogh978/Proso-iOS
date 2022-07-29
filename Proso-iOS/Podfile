@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '15.0'
+
+target 'Proso-iOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Proso-iOS
+ pod 'SnapKit', '~> 5.6.0'
+pod 'Kingfisher', '~> 7.0'
+pod 'KakaoSDKCommon'  # 필수 요소를 담은 공통 모듈
+pod 'KakaoSDKAuth'  # 사용자 인증
+pod 'KakaoSDKUser'
+end
