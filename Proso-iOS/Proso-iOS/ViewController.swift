@@ -10,16 +10,13 @@ import Alamofire
 import SnapKit
 
 class ViewController: UIViewController,MTMapViewDelegate {
-   
+    
     var mapView: MTMapView!
 
        override func viewDidLoad() {
            super.viewDidLoad()
            
-           mapView = MTMapView(frame: self.view.frame)
-           mapView.delegate = self
-           mapView.baseMapType = .standard
-           self.view.addSubview(mapView)
+           view.backgroundColor = .red
        }
     
 
