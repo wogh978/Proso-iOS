@@ -21,6 +21,9 @@
 		D45DE9B02892B141000C60F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9AF2892B13C000C60F3 /* libsqlite3.tbd */; };
 		D45DE9F92892BECA000C60F3 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9F82892BECA000C60F3 /* DaumMap.framework */; };
 		D45DE9FA2892C196000C60F3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9A32892B10B000C60F3 /* OpenGLES.framework */; };
+		D4892912289E2C5B00AE73ED /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892911289E2C5B00AE73ED /* ColorExtension.swift */; };
+		D4892914289E2D3500AE73ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892913289E2D3500AE73ED /* LoginViewController.swift */; };
+		D4892916289E417B00AE73ED /* SignUpAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892915289E417B00AE73ED /* SignUpAgreementViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		D45DE9F52892B1E3000C60F3 /* Proso-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Proso-Bridging-Header.h"; sourceTree = "<group>"; };
 		D45DE9F62892B4AD000C60F3 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		D45DE9F82892BECA000C60F3 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		D4892911289E2C5B00AE73ED /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		D4892913289E2D3500AE73ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D4892915289E417B00AE73ED /* SignUpAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAgreementViewController.swift; sourceTree = "<group>"; };
 		F60EBD28FB1A9FBB1FD1789F /* Pods-Proso-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proso-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +120,8 @@
 		D45DE98E2892AA76000C60F3 /* Proso-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D4892910289E2C4100AE73ED /* Common */,
+				D489290F289E2BC500AE73ED /* Seo */,
 				D45DE98F2892AA76000C60F3 /* AppDelegate.swift */,
 				D45DE9912892AA76000C60F3 /* SceneDelegate.swift */,
 				D45DE9932892AA76000C60F3 /* ViewController.swift */,
@@ -130,6 +138,23 @@
 				D45DE9F52892B1E3000C60F3 /* Proso-Bridging-Header.h */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		D489290F289E2BC500AE73ED /* Seo */ = {
+			isa = PBXGroup;
+			children = (
+				D4892913289E2D3500AE73ED /* LoginViewController.swift */,
+				D4892915289E417B00AE73ED /* SignUpAgreementViewController.swift */,
+			);
+			path = Seo;
+			sourceTree = "<group>";
+		};
+		D4892910289E2C4100AE73ED /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D4892911289E2C5B00AE73ED /* ColorExtension.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +274,9 @@
 				D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */,
 				D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */,
 				D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */,
+				D4892916289E417B00AE73ED /* SignUpAgreementViewController.swift in Sources */,
+				D4892914289E2D3500AE73ED /* LoginViewController.swift in Sources */,
+				D4892912289E2C5B00AE73ED /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,15 +11,7 @@ import SnapKit
 
 class ViewController: UIViewController,MTMapViewDelegate {
     
-    var mapView: MTMapView!
-
        override func viewDidLoad() {
            super.viewDidLoad()
-           
-           view.backgroundColor = .red
        }
-    
-
-
 }
-
