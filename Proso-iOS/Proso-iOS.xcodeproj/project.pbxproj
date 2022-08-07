@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0823D5DD610BF4C8911A098F /* Pods_Proso_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D85B76EC65DDD18676860BC /* Pods_Proso_iOS.framework */; };
+		3F3380D928A0345000F39197 /* MakeThemeThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3380D828A0345000F39197 /* MakeThemeThirdViewController.swift */; };
 		3F6E8D5F289E303200AAA5C9 /* ThemeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E8D5E289E303200AAA5C9 /* ThemeMainViewController.swift */; };
 		3F6E8D64289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E8D63289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift */; };
 		3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */; };
+		3F9E4CED289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */; };
 		D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE98F2892AA76000C60F3 /* AppDelegate.swift */; };
 		D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE9912892AA76000C60F3 /* SceneDelegate.swift */; };
 		D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE9932892AA76000C60F3 /* ViewController.swift */; };
@@ -27,9 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F3380D828A0345000F39197 /* MakeThemeThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeThirdViewController.swift; sourceTree = "<group>"; };
 		3F6E8D5E289E303200AAA5C9 /* ThemeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeMainViewController.swift; sourceTree = "<group>"; };
 		3F6E8D63289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularThemeScrollViewCell.swift; sourceTree = "<group>"; };
 		3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFirstViewController.swift; sourceTree = "<group>"; };
+		3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeThemeSecondViewController.swift; sourceTree = "<group>"; };
 		578893027E657D957566D666 /* Pods-Proso-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proso-iOS.release.xcconfig"; path = "Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		8D85B76EC65DDD18676860BC /* Pods_Proso_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proso_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45DE98C2892AA76000C60F3 /* Proso-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Proso-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,8 @@
 		3F8656BD289E5D85000909D3 /* MakeThemeView */ = {
 			isa = PBXGroup;
 			children = (
+				3F3380D828A0345000F39197 /* MakeThemeThirdViewController.swift */,
+				3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */,
 				3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */,
 			);
 			path = MakeThemeView;
@@ -287,7 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3380D928A0345000F39197 /* MakeThemeThirdViewController.swift in Sources */,
 				D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */,
+				3F9E4CED289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift in Sources */,
 				D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */,
 				3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */,
 				D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */,
