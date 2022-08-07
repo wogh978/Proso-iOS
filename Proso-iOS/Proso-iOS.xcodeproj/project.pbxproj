@@ -24,6 +24,10 @@
 		D4892912289E2C5B00AE73ED /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892911289E2C5B00AE73ED /* ColorExtension.swift */; };
 		D4892914289E2D3500AE73ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892913289E2D3500AE73ED /* LoginViewController.swift */; };
 		D4892916289E417B00AE73ED /* SignUpAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892915289E417B00AE73ED /* SignUpAgreementViewController.swift */; };
+		D4892918289F900600AE73ED /* SignUpNickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892917289F900600AE73ED /* SignUpNickNameViewController.swift */; };
+		D489291A289FB3A800AE73ED /* SignUpProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892919289FB3A800AE73ED /* SignUpProfileImage.swift */; };
+		D489291E289FBDAD00AE73ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489291D289FBDAD00AE73ED /* MainViewController.swift */; };
+		D4892921289FD73700AE73ED /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892920289FD73700AE73ED /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		D4892911289E2C5B00AE73ED /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		D4892913289E2D3500AE73ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4892915289E417B00AE73ED /* SignUpAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAgreementViewController.swift; sourceTree = "<group>"; };
+		D4892917289F900600AE73ED /* SignUpNickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNickNameViewController.swift; sourceTree = "<group>"; };
+		D4892919289FB3A800AE73ED /* SignUpProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProfileImage.swift; sourceTree = "<group>"; };
+		D489291D289FBDAD00AE73ED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D4892920289FD73700AE73ED /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F60EBD28FB1A9FBB1FD1789F /* Pods-Proso-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proso-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,8 +151,9 @@
 		D489290F289E2BC500AE73ED /* Seo */ = {
 			isa = PBXGroup;
 			children = (
-				D4892913289E2D3500AE73ED /* LoginViewController.swift */,
-				D4892915289E417B00AE73ED /* SignUpAgreementViewController.swift */,
+				D489291F289FD72300AE73ED /* TabBarController */,
+				D489291C289FBD9400AE73ED /* MainViewControllers */,
+				D489291B289FBBE200AE73ED /* SignUpViewControllers */,
 			);
 			path = Seo;
 			sourceTree = "<group>";
@@ -155,6 +164,33 @@
 				D4892911289E2C5B00AE73ED /* ColorExtension.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D489291B289FBBE200AE73ED /* SignUpViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4892913289E2D3500AE73ED /* LoginViewController.swift */,
+				D4892915289E417B00AE73ED /* SignUpAgreementViewController.swift */,
+				D4892917289F900600AE73ED /* SignUpNickNameViewController.swift */,
+				D4892919289FB3A800AE73ED /* SignUpProfileImage.swift */,
+			);
+			path = SignUpViewControllers;
+			sourceTree = "<group>";
+		};
+		D489291C289FBD9400AE73ED /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D489291D289FBDAD00AE73ED /* MainViewController.swift */,
+			);
+			path = MainViewControllers;
+			sourceTree = "<group>";
+		};
+		D489291F289FD72300AE73ED /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				D4892920289FD73700AE73ED /* TabBarViewController.swift */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,11 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4892918289F900600AE73ED /* SignUpNickNameViewController.swift in Sources */,
 				D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */,
 				D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */,
 				D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */,
 				D4892916289E417B00AE73ED /* SignUpAgreementViewController.swift in Sources */,
+				D489291A289FB3A800AE73ED /* SignUpProfileImage.swift in Sources */,
+				D489291E289FBDAD00AE73ED /* MainViewController.swift in Sources */,
 				D4892914289E2D3500AE73ED /* LoginViewController.swift in Sources */,
+				D4892921289FD73700AE73ED /* TabBarViewController.swift in Sources */,
 				D4892912289E2C5B00AE73ED /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

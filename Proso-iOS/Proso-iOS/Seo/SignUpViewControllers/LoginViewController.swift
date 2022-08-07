@@ -1,9 +1,3 @@
-//
-//  LoginViewController.swift
-//  Proso-iOS
-//
-//  Created by changgyo seo on 2022/08/06.
-//
 
 import UIKit
 import SnapKit

@@ -1,20 +1,12 @@
-//
-//  SignUpAgreementViewController.swift
-//  Proso-iOS
-//
-//  Created by changgyo seo on 2022/08/06.
-//
 
 import UIKit
 
 class SignUpAgreementViewController: UIViewController {
-    
     let guideLineLabel: UILabel = {
         let label = UILabel()
         
         label.text = "약관에 동의해주세요."
         label.font = UIFont.boldSystemFont(ofSize: 18)
-        
         
         return label
     }()
@@ -30,13 +22,13 @@ class SignUpAgreementViewController: UIViewController {
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 8
         
-        
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "회원가입"
+        self.changeBackButton()
         layout()
         attributes()
     }
@@ -73,6 +65,15 @@ class SignUpAgreementViewController: UIViewController {
         agreementTableView.isScrollEnabled = false
         agreementTableView.separatorStyle = .none
         agreementTableView.sectionIndexColor = .none
+        
+        finishButton.addTarget(self, action: #selector(tapFinishButton(_:)), for: .touchUpInside)
+    }
+    
+    @objc private func tapFinishButton(_ sender: Any){
+        if finishButton.backgroundColor == .primaryColor {
+            let nextVC = SignUpNickNameViewController()
+            self.navigationController?.pushViewController(nextVC, animated: false)
+        }
     }
 }
 
@@ -93,7 +94,7 @@ extension SignUpAgreementViewController: UITableViewDataSource, UITableViewDeleg
         
         return cell
     }
-
+    
 }
 
 extension SignUpAgreementViewController: tapFirstAgreementButton {
@@ -123,6 +124,7 @@ extension SignUpAgreementViewController: tapFirstAgreementButton {
         if all {
             finishButton.backgroundColor = .primaryColor
         }
+        
         else {
             finishButton.backgroundColor = UIColor(red: 0.87, green: 0.87, blue: 0.87, alpha: 0.87)
         }
