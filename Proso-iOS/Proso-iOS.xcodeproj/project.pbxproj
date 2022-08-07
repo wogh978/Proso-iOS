@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0823D5DD610BF4C8911A098F /* Pods_Proso_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D85B76EC65DDD18676860BC /* Pods_Proso_iOS.framework */; };
+		3F6E8D5F289E303200AAA5C9 /* ThemeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E8D5E289E303200AAA5C9 /* ThemeMainViewController.swift */; };
+		3F6E8D64289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E8D63289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift */; };
+		3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */; };
 		D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE98F2892AA76000C60F3 /* AppDelegate.swift */; };
 		D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE9912892AA76000C60F3 /* SceneDelegate.swift */; };
 		D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE9932892AA76000C60F3 /* ViewController.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F6E8D5E289E303200AAA5C9 /* ThemeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeMainViewController.swift; sourceTree = "<group>"; };
+		3F6E8D63289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularThemeScrollViewCell.swift; sourceTree = "<group>"; };
+		3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFirstViewController.swift; sourceTree = "<group>"; };
 		578893027E657D957566D666 /* Pods-Proso-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proso-iOS.release.xcconfig"; path = "Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		8D85B76EC65DDD18676860BC /* Pods_Proso_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proso_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45DE98C2892AA76000C60F3 /* Proso-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Proso-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3F6E8D5D289E300000AAA5C9 /* Ahn */ = {
+			isa = PBXGroup;
+			children = (
+				3F6E8D5E289E303200AAA5C9 /* ThemeMainViewController.swift */,
+				3F6E8D62289E3F2D00AAA5C9 /* Model */,
+				3F6E8D65289E41BF00AAA5C9 /* View */,
+				3F8656BD289E5D85000909D3 /* MakeThemeView */,
+			);
+			path = Ahn;
+			sourceTree = "<group>";
+		};
+		3F6E8D62289E3F2D00AAA5C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F6E8D65289E41BF00AAA5C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F6E8D63289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F8656BD289E5D85000909D3 /* MakeThemeView */ = {
+			isa = PBXGroup;
+			children = (
+				3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */,
+			);
+			path = MakeThemeView;
+			sourceTree = "<group>";
+		};
 		706D623536C89205CBA9C074 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +154,7 @@
 		D45DE98E2892AA76000C60F3 /* Proso-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3F6E8D5D289E300000AAA5C9 /* Ahn */,
 				D45DE98F2892AA76000C60F3 /* AppDelegate.swift */,
 				D45DE9912892AA76000C60F3 /* SceneDelegate.swift */,
 				D45DE9932892AA76000C60F3 /* ViewController.swift */,
@@ -248,7 +289,10 @@
 			files = (
 				D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */,
 				D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */,
+				3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */,
 				D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */,
+				3F6E8D5F289E303200AAA5C9 /* ThemeMainViewController.swift in Sources */,
+				3F6E8D64289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -370,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -389,7 +433,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VT6KC94KM7;
+				DEVELOPMENT_TEAM = H5Z254TS6R;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -409,6 +453,7 @@
 				INFOPLIST_FILE = "Proso-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -417,7 +462,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "pccommen.Proso-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "pccommenAhn.Proso-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Header/Proso-Bridging-Header.h";
@@ -435,7 +480,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VT6KC94KM7;
+				DEVELOPMENT_TEAM = H5Z254TS6R;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -455,6 +500,7 @@
 				INFOPLIST_FILE = "Proso-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -463,7 +509,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "pccommen.Proso-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "pccommenAhn.Proso-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Header/Proso-Bridging-Header.h";
