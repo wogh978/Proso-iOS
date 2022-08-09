@@ -28,7 +28,7 @@ class SignUpAgreementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "회원가입"
-        self.changeBackButton()
+        self.navigationController?.setUpNavigationItems(items: [.back])
         layout()
         attributes()
     }

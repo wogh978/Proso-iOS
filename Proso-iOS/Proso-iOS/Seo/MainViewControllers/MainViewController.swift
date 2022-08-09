@@ -35,9 +35,9 @@ class MainViewController: UIViewController {
         
         return label
     }()
-    var viewList: [randomButton] {
+    var viewList: [randomButton] = {
         return randomButton.allCases + randomButton.allCases + randomButton.allCases
-    }
+    }()
     
     let leftButton = UIButton()
     let rightButton = UIButton()
@@ -57,8 +57,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpLogo()
-        navigationController?.addUnderLineView()
+        self.navigationController?.setUpNavigationItems(items: [.logo, .bell])
+            
         layout()
         attributes()
     }
@@ -128,9 +128,7 @@ class MainViewController: UIViewController {
         collectionView.setContentOffset(CGPoint(x: collectionView.contentOffset.x + (view.frame.width / 2), y: 0) , animated: true)
     }
     private func changeThemeTitle(index: Int) {
-        print(index)
         infoLabel.text = viewList[index].title
-        
     }
 }
 
@@ -147,9 +145,12 @@ extension MainViewController: UIScrollViewDelegate, UICollectionViewDelegateFlow
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UICollectionViewCell", for: indexPath) as? randomButtonCell else { return UICollectionViewCell() }
         cell.imageView = UIImageView(image: viewList[indexPath.section].image)
-        changeThemeTitle(index: indexPath.section % viewList.count)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(RandomSelectedViewController(), animated: false)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -173,14 +174,16 @@ extension MainViewController: UIScrollViewDelegate, UICollectionViewDelegateFlow
             collectionView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat(x), y: self.collectionView.contentInset.top), animated: true)
             UIView.animate(withDuration: 0.4, delay: 0, options: [], animations: {
                 cell.transform = .identity
+                curCell?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+                self.changeThemeTitle(index: x)
             }){ _ in
                 if x == 0 {
                     self.cantAnimation = true
-                    collectionView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat( self.viewList.count / 3 - 1), y: self.collectionView.contentInset.top), animated: false)
+                    collectionView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat( 3 ), y: self.collectionView.contentInset.top), animated: false)
                 }
                 else if  x ==  self.viewList.count - 1 {
                     self.cantAnimation = true
-                    collectionView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat(self.viewList.count / 3 + 1), y: self.collectionView.contentInset.top), animated: false)
+                    collectionView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat(5), y: self.collectionView.contentInset.top), animated: false)
                 }
                 self.curIdx = x
                 collectionView.isScrollEnabled = true
@@ -205,27 +208,3 @@ class randomButtonCell: UICollectionViewCell {
         }
     }
 }
-
-enum randomButton: CaseIterable {
-    case meal
-    case cafe
-    
-    var image: UIImage {
-        switch self {
-        case .cafe:
-            return UIImage(named: "cafeButton") ?? UIImage()
-        case .meal:
-            return UIImage(named: "mealButton") ?? UIImage()
-        }
-    }
-    
-    var title: String {
-        switch self {
-        case .cafe:
-            return "카페"
-        case .meal:
-            return "식당"
-        }
-    }
-}
-

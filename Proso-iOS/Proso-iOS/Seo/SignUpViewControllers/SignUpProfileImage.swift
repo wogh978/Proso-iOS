@@ -57,7 +57,7 @@ class SignUpProfileImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "회원가입"
-        self.changeBackButton()
+        self.navigationController?.setUpNavigationItems(items: [.back])
         layout()
         attributes()
     }
@@ -134,9 +134,6 @@ class SignUpProfileImageViewController: UIViewController {
     
     @objc private func tapFinishButton(_ sender: Any){
         if finishButton.backgroundColor == .primaryColor {
-           // let nextVC =
-            //self.navigationController?.pushViewController(nextVC, animated: false)
-            print("sdsd")
         }
     }
 }
