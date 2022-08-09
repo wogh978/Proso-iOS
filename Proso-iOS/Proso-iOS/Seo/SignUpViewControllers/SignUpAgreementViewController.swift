@@ -7,6 +7,7 @@ class SignUpAgreementViewController: UIViewController {
         
         label.text = "약관에 동의해주세요."
         label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.textColor = .black
         
         return label
     }()
@@ -65,6 +66,7 @@ class SignUpAgreementViewController: UIViewController {
         agreementTableView.isScrollEnabled = false
         agreementTableView.separatorStyle = .none
         agreementTableView.sectionIndexColor = .none
+        agreementTableView.backgroundColor = .white
         
         finishButton.addTarget(self, action: #selector(tapFinishButton(_:)), for: .touchUpInside)
     }
@@ -78,6 +80,7 @@ class SignUpAgreementViewController: UIViewController {
 }
 
 extension SignUpAgreementViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
@@ -88,10 +91,12 @@ extension SignUpAgreementViewController: UITableViewDataSource, UITableViewDeleg
         cell.selectionStyle = .none
         cell.delegate = self
         cell.agreementLabel.text = agreementTextList[indexPath.row]
+        cell.agreementLabel.textColor = .black
+        cell.backgroundColor = .white
+        
         if indexPath.row == 0 {
             cell.isFirst = true
         }
-        
         return cell
     }
     

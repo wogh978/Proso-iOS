@@ -63,6 +63,11 @@ class MainViewController: UIViewController {
         attributes()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     private func attributes() {
         collectionView.delegate = self
         collectionView.dataSource = self

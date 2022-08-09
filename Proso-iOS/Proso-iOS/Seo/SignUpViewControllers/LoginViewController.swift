@@ -24,15 +24,18 @@ class LoginViewController: UIViewController {
         subTitleLabel.text = subTitle
         subTitleLabel.font = UIFont.systemFont(ofSize: 24)
         subTitleLabel.textAlignment = .center
+        subTitleLabel.textColor = .black
         
         mainPrefixTitleLabel.text = mainPreFixTitle
         mainPrefixTitleLabel.font = UIFont.boldSystemFont(ofSize: 32)
         mainPrefixTitleLabel.textAlignment = .center
+        mainPrefixTitleLabel.textColor = .black
         
         underHighlighter.backgroundColor = UIColor(red: 1.00, green: 0.80, blue: 0.80, alpha: 1.00)
         
         mainPostFixTitleLabel.text = mainPostFixTitle
         mainPostFixTitleLabel.font = UIFont.systemFont(ofSize: 32)
+        mainPostFixTitleLabel.textColor = .black
         
         kakaoLoginButton.image = UIImage(named: "KakaoLoginButton")
         kakaoLoginButton.contentMode = .scaleToFill

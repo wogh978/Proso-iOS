@@ -14,6 +14,7 @@ class SignUpProfileImageViewController: UIViewController {
         
         label.text = "프로필 사진을 설정해주세요."
         label.font = UIFont.boldSystemFont(ofSize: 18)
+    
         
         return label
     }()
@@ -134,6 +135,9 @@ class SignUpProfileImageViewController: UIViewController {
     
     @objc private func tapFinishButton(_ sender: Any){
         if finishButton.backgroundColor == .primaryColor {
+            let temp = TabBarViewController()
+            temp.modalPresentationStyle = .fullScreen
+            self.navigationController?.topViewController?.present(temp, animated: false)
         }
     }
 }
