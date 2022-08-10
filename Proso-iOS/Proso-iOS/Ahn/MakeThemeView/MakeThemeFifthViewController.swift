@@ -61,13 +61,13 @@ class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMap
     
     let nextButton: UIButton = { ///다음 버튼
         let button = UIButton()
-        button.backgroundColor = #colorLiteral(red: 0.8926360011, green: 0.8926360011, blue: 0.8926360011, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 1, green: 0.4265864491, blue: 0.4015736282, alpha: 1)
         button.layer.cornerRadius = 8
         button.setTitle("다음", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.titleLabel?.minimumScaleFactor = 0.2
-        button.isEnabled = false
+        button.isEnabled = true
         
         return button
     }()
@@ -145,7 +145,7 @@ class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMap
         dismiss(animated: true, completion: nil)
     } ///뒤로 가기 버튼
     
-    @objc private func addLocation(){
+    @objc private func addLocation(){ /// ** Map View 오류 관계로 임시로 완료 화면으로 넘어감 . 추후에 작업 예정**
         
         ///TextField의 Text를 불러와 서버에 넣는 함수. 또는 다음 뷰 컨트롤러에 데이터를 전달
         
@@ -160,7 +160,7 @@ class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMap
         
         ///TextField의 Text를 불러와 서버에 넣는 함수. 또는 다음 뷰 컨트롤러에 데이터를 전달
         
-        let rootVC = MakeThemeSecondViewController()
+        let rootVC = MakeThemeCompleteViewController()
         let navVC = UINavigationController(rootViewController: rootVC)
         navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: false)
