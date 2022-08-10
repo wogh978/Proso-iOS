@@ -51,7 +51,10 @@ class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMap
         button.titleLabel?.textAlignment = .center
         button.backgroundColor = #colorLiteral(red: 0.9593991637, green: 0.9593990445, blue: 0.9593990445, alpha: 1)
         button.tintColor = #colorLiteral(red: 0.6642269492, green: 0.6642268896, blue: 0.6642268896, alpha: 1)
-        button.setTitleColor(#colorLiteral(red: 0.6642269492, green: 0.6642268896, blue: 0.6642268896, alpha: 1), for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.6642269492,
+                                           green: 0.6642268896,
+                                           blue: 0.6642268896,
+                                           alpha: 1), for: .normal)
         button.configuration?.titlePadding = 9.0
         button.layer.cornerRadius = 8.0
         button.setImage(buttonIcon, for: .normal)

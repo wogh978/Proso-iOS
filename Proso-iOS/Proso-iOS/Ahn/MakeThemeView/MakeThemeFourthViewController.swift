@@ -50,7 +50,11 @@ class MakeThemeFourthViewController: UIViewController, MTMapViewDelegate{
         button.titleLabel?.font = UIFont.systemFont(ofSize: 12.0)
         button.titleLabel?.textAlignment = .center
         button.layer.borderColor = #colorLiteral(red: 1, green: 0.3294117647, blue: 0.3294117647, alpha: 1)
-        button.setTitleColor(#colorLiteral(red: 1, green: 0.3294117647, blue: 0.3294117647, alpha: 1), for: .normal)
+        button.setTitleColor(#colorLiteral(red: 1,
+                                           green: 0.3294117647,
+                                           blue: 0.3294117647,
+                                           alpha: 1),
+                                           for: .normal)
         button.layer.borderWidth = 1.0
         button.layer.cornerRadius = 8.0
         button.layer.cornerCurve = .continuous
@@ -170,7 +174,9 @@ class MakeThemeFourthViewController: UIViewController, MTMapViewDelegate{
 
 // MARK: - 이미지 업로드를 위한 extension
 extension MakeThemeFourthViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info:
+                               [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             backGroundImage.contentMode = .scaleAspectFit
             backGroundImage.image = pickedImage

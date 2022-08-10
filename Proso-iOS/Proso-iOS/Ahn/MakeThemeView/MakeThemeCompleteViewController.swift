@@ -33,7 +33,9 @@ class MakeThemeCompleteViewController: UIViewController {
         let attrString = NSMutableAttributedString(string: label.text!)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 4
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle,
+                                value: paragraphStyle,
+                                range: NSMakeRange(0, attrString.length))
         label.attributedText = attrString
         
         return label

@@ -40,7 +40,9 @@ class MakeThemeThirdViewController: UIViewController, UICollectionViewDelegate, 
         let attrString = NSMutableAttributedString(string: label.text!)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 4
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle,
+                                value: paragraphStyle,
+                                range: NSMakeRange(0, attrString.length))
         label.attributedText = attrString
         
         return label
@@ -62,7 +64,8 @@ class MakeThemeThirdViewController: UIViewController, UICollectionViewDelegate, 
         viewLayout.minimumLineSpacing = 12
         viewLayout.minimumInteritemSpacing = 12 //버튼 간 간격
         
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        let collectionView = UICollectionView(frame: .zero,
+                                              collectionViewLayout: viewLayout)
         collectionView.isScrollEnabled = false
         collectionView.collectionViewLayout = viewLayout
         collectionView.backgroundColor = .white
@@ -89,7 +92,8 @@ class MakeThemeThirdViewController: UIViewController, UICollectionViewDelegate, 
         viewLayout.minimumLineSpacing = 12
         viewLayout.minimumInteritemSpacing = 12
         
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        let collectionView = UICollectionView(frame: .zero,
+                                              collectionViewLayout: viewLayout)
         collectionView.isScrollEnabled = false
         collectionView.collectionViewLayout = viewLayout
         collectionView.backgroundColor = .white
@@ -115,7 +119,8 @@ class MakeThemeThirdViewController: UIViewController, UICollectionViewDelegate, 
         viewLayout.minimumLineSpacing = 12
         viewLayout.minimumInteritemSpacing = 12
         
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        let collectionView = UICollectionView(frame: .zero,
+                                              collectionViewLayout: viewLayout)
         collectionView.isScrollEnabled = false
         collectionView.collectionViewLayout = viewLayout
         collectionView.backgroundColor = .white
@@ -245,15 +250,18 @@ class MakeThemeThirdViewController: UIViewController, UICollectionViewDelegate, 
     private func setupViews(){
         foodCollectionView.dataSource = self
         foodCollectionView.delegate = self
-        foodCollectionView.register(FoodCell.self, forCellWithReuseIdentifier: FoodCell.identifier)
+        foodCollectionView.register(FoodCell.self,
+                                    forCellWithReuseIdentifier: FoodCell.identifier)
         
         cafeCollectionView.dataSource = self
         cafeCollectionView.delegate = self
-        cafeCollectionView.register(CafeCell.self, forCellWithReuseIdentifier: CafeCell.identifier)
+        cafeCollectionView.register(CafeCell.self,
+                                    forCellWithReuseIdentifier: CafeCell.identifier)
         
         activityCollectionView.dataSource = self
         activityCollectionView.delegate = self
-        activityCollectionView.register(ActivityCell.self, forCellWithReuseIdentifier: ActivityCell.identifier)
+        activityCollectionView.register(ActivityCell.self,
+                                        forCellWithReuseIdentifier: ActivityCell.identifier)
     }
      
     
@@ -272,7 +280,8 @@ class MakeThemeThirdViewController: UIViewController, UICollectionViewDelegate, 
 extension MakeThemeThirdViewController: UICollectionViewDataSource{
     
     // MARK: - 셀 갯수 구하기
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.foodCollectionView {
             return foodHashTags.count
         }else if collectionView == self.cafeCollectionView {
@@ -283,16 +292,23 @@ extension MakeThemeThirdViewController: UICollectionViewDataSource{
     }
     
     // MARK: - 셀 정보 설정
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.foodCollectionView { ///콜렉션 뷰가 세 개이므로, 각 콜렉션 뷰를 분류해야함
 
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCell.identifier, for: indexPath) as! FoodCell ///FoodCell로 Downcasting
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: FoodCell.identifier,
+                for: indexPath) as! FoodCell ///FoodCell로 Downcasting
+            
             let food = foodHashTags[indexPath.row] ///음식 컬렉션 뷰이므로 음식 해쉬태그 배열 불러옴, indexPath.row로 Index 지정
             cell.setup(with: food) ///불러온 해쉬태그 정보를 바탕으로 셀의 텍스트 지정
             return cell
+            
         }else if collectionView == self.cafeCollectionView {
 
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CafeCell.identifier, for: indexPath) as! CafeCell
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CafeCell.identifier,
+                for: indexPath) as! CafeCell
             
             let cafe = cafeHashTags[indexPath.row]
             cell.setup(with: cafe)
@@ -300,7 +316,9 @@ extension MakeThemeThirdViewController: UICollectionViewDataSource{
             return cell
         }else{
 
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ActivityCell.identifier, for: indexPath) as! ActivityCell
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: ActivityCell.identifier,
+                for: indexPath) as! ActivityCell
             
             let activity = activityHashTags[indexPath.row]
             cell.setup(with: activity)
@@ -313,20 +331,25 @@ extension MakeThemeThirdViewController: UICollectionViewDataSource{
 extension MakeThemeThirdViewController: UICollectionViewDelegateFlowLayout {
     
     // MARK: - 셀을 선택했을 때
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        
         if(collectionView == foodCollectionView){
             let selectedCell = collectionView.cellForItem(at: indexPath) as! FoodCell
             selectedCell.foodLabel.textColor = #colorLiteral(red: 1, green: 0.3294117647, blue: 0.3294117647, alpha: 1)
             selectedCell.contentView.layer.borderColor = #colorLiteral(red: 1, green: 0.3294117647, blue: 0.3294117647, alpha: 1)
+            
         }else if(collectionView == cafeCollectionView){
             let selectedCell = collectionView.cellForItem(at: indexPath) as! CafeCell
             selectedCell.cafeLabel.textColor = #colorLiteral(red: 1, green: 0.3294117647, blue: 0.3294117647, alpha: 1)
             selectedCell.contentView.layer.borderColor = #colorLiteral(red: 1, green: 0.3294117647, blue: 0.3294117647, alpha: 1)
+            
         }else{
             let selectedCell = collectionView.cellForItem(at: indexPath) as! ActivityCell
             selectedCell.activityLabel.textColor = #colorLiteral(red: 1, green: 0.3294117647, blue: 0.3294117647, alpha: 1)
             selectedCell.contentView.layer.borderColor = #colorLiteral(red: 1, green: 0.3294117647, blue: 0.3294117647, alpha: 1)
         }
+        
         selectedCount += 1
 
         if(selectedCount > 0 && selectedCount <= 3){
@@ -339,19 +362,27 @@ extension MakeThemeThirdViewController: UICollectionViewDelegateFlowLayout {
     }
     
     // MARK: - 셀 선택을 해제했을 때
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        didDeselectItemAt indexPath: IndexPath) {
+        
         if(collectionView == foodCollectionView){
+            
             let selectedCell = collectionView.cellForItem(at: indexPath) as! FoodCell
             selectedCell.foodLabel.textColor = #colorLiteral(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
             selectedCell.contentView.layer.borderColor = #colorLiteral(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+            
         }else if(collectionView == cafeCollectionView){
+            
             let selectedCell = collectionView.cellForItem(at: indexPath) as! CafeCell
             selectedCell.cafeLabel.textColor = #colorLiteral(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
             selectedCell.contentView.layer.borderColor = #colorLiteral(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+            
         }else{
+            
             let selectedCell = collectionView.cellForItem(at: indexPath) as! ActivityCell
             selectedCell.activityLabel.textColor = #colorLiteral(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
             selectedCell.contentView.layer.borderColor = #colorLiteral(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+            
         }
         selectedCount -= 1
         
@@ -387,6 +418,7 @@ extension MakeThemeThirdViewController: UICollectionViewDelegateFlowLayout {
 }
 // MARK: - 해쉬 태그 콜렉션 뷰 셀들을 왼쪽으로 정렬하기 위한 레이아웃 커스텀 설정
 class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
+    
   override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
     let attributes = super.layoutAttributesForElements(in: rect)
     
