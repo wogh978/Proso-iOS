@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0823D5DD610BF4C8911A098F /* Pods_Proso_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D85B76EC65DDD18676860BC /* Pods_Proso_iOS.framework */; };
+		3F03D0D628A3D0DD002BA397 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03D0D528A3D0DD002BA397 /* AddLocationViewController.swift */; };
 		3F3380D928A0345000F39197 /* MakeThemeThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3380D828A0345000F39197 /* MakeThemeThirdViewController.swift */; };
 		3F3380DB28A113B500F39197 /* HashTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3380DA28A113B500F39197 /* HashTagModel.swift */; };
 		3F3380DD28A2040F00F39197 /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3380DC28A2040F00F39197 /* HashTagCollectionViewCell.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F03D0D528A3D0DD002BA397 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		3F3380D828A0345000F39197 /* MakeThemeThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeThirdViewController.swift; sourceTree = "<group>"; };
 		3F3380DA28A113B500F39197 /* HashTagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagModel.swift; sourceTree = "<group>"; };
 		3F3380DC28A2040F00F39197 /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -135,8 +137,9 @@
 				3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */,
 				3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */,
 				3F3380D828A0345000F39197 /* MakeThemeThirdViewController.swift */,
-				3FD2F15028A3C99900E7C0D4 /* MakeThemeFifthViewController.swift */,
 				3FD2F14E28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift */,
+				3FD2F15028A3C99900E7C0D4 /* MakeThemeFifthViewController.swift */,
+				3F03D0D528A3D0DD002BA397 /* AddLocationViewController.swift */,
 			);
 			path = MakeThemeView;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				3FD2F15128A3C99900E7C0D4 /* MakeThemeFifthViewController.swift in Sources */,
 				3F3380DD28A2040F00F39197 /* HashTagCollectionViewCell.swift in Sources */,
 				D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */,
+				3F03D0D628A3D0DD002BA397 /* AddLocationViewController.swift in Sources */,
 				3F9E4CED289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift in Sources */,
 				D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */,
 				3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */,

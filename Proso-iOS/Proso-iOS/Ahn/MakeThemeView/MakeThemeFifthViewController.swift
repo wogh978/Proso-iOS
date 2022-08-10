@@ -25,40 +25,38 @@ class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMap
     
     let themeQustion: UILabel = { ///테마 만들기 질문
         let label = UILabel()
-        label.text = "테마 이름을 입력해주세요."
+        label.text = "테마에 장소를 추가해주세요."
         label.font = UIFont.boldSystemFont(ofSize: 18.0)
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.2
         
         return label
     }()
-    
-    let inputField: UITextField = { ///사용자 입력 칸, 디자인이 밑줄 형태이므로 frame 커스텀화
-        let textField = UITextField()
-        
-        textField.placeholder = "내용 입력"
-        textField.font = UIFont.boldSystemFont(ofSize: 14.0)
-        textField.adjustsFontSizeToFitWidth = true
-
-        return textField
-    }()
-    
-    let inputFieldUnderLine: UIView = {
-        let textFieldLine = UIView()
-        textFieldLine.backgroundColor = #colorLiteral(red: 0.8861967921, green: 0.8861967921, blue: 0.8861967921, alpha: 1)
-        
-        return textFieldLine
-    }()
-    
-    let textCountLabel: UILabel = { ///입력 글자 수 표시 (입력칸 아래에)
+   
+    let locationLabel: UILabel = {
         let label = UILabel()
-        label.text = "0/0"
-        label.font = UIFont.systemFont(ofSize: 12.0)
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.2
+        label.text = "장소 목록"
         label.textColor = #colorLiteral(red: 0.4756370187, green: 0.4756369591, blue: 0.4756369591, alpha: 1)
+        label.font = UIFont.systemFont(ofSize: 14.0)
         
         return label
+    }()
+    
+    let addLocationButton: UIButton = {
+        let button = UIButton()
+        let buttonIcon = UIImage(systemName: "plus.circle.fill")?.withRenderingMode(.alwaysTemplate)
+        
+        button.setTitle(" 장소 추가하기", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
+        button.titleLabel?.textAlignment = .center
+        button.backgroundColor = #colorLiteral(red: 0.9593991637, green: 0.9593990445, blue: 0.9593990445, alpha: 1)
+        button.tintColor = #colorLiteral(red: 0.6642269492, green: 0.6642268896, blue: 0.6642268896, alpha: 1)
+        button.setTitleColor(#colorLiteral(red: 0.6642269492, green: 0.6642268896, blue: 0.6642268896, alpha: 1), for: .normal)
+        button.configuration?.titlePadding = 9.0
+        button.layer.cornerRadius = 8.0
+        button.setImage(buttonIcon, for: .normal)
+        
+        return button
     }()
     
     let nextButton: UIButton = { ///다음 버튼
@@ -100,18 +98,16 @@ class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMap
             $0.leading.equalToSuperview().offset(20)
         }
         
-        inputField.snp.makeConstraints{
+        locationLabel.snp.makeConstraints{
             $0.top.equalTo(themeQustion.snp.bottom).offset(24)
-            $0.height.equalTo(20)
             $0.leading.equalToSuperview().offset(20)
-            $0.trailing.equalToSuperview().offset(-20)
         }
         
-        inputFieldUnderLine.snp.makeConstraints{
-            $0.height.equalTo(1)
+        addLocationButton.snp.makeConstraints{
+            $0.top.equalTo(locationLabel.snp.bottom).offset(12)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
-            $0.top.equalTo(inputField.snp.bottom).offset(8)
+            $0.height.equalTo(40)
         }
         
         nextButton.snp.makeConstraints{
@@ -120,23 +116,17 @@ class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMap
             $0.bottom.equalToSuperview().inset(34)
             $0.height.equalTo(56)
         }
-        
-        textCountLabel.snp.makeConstraints{
-            $0.top.equalTo(inputFieldUnderLine.snp.bottom).offset(10)
-            $0.trailing.equalToSuperview().offset(-20)
-        }
-        
-        inputField.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged) ///글자 수 카운트를 위한 설정
-        
+ 
         nextButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside) ///다음 버튼 활성화/비활성화를 위한 설정
+        addLocationButton.addTarget(self, action: #selector(addLocation), for: .touchUpInside) ///다음 버튼 활성화/비활성화를 위한 설정
+
     }
     
 // MARK: - 컴포넌트 추가 및 상단 네비게이션 바 설정
     private func addView(){
-        [progressBar,themeQustion,inputField,inputFieldUnderLine,textCountLabel,nextButton].forEach({
+        [progressBar,themeQustion,locationLabel,addLocationButton,nextButton].forEach({
             self.view.addSubview($0)
         })
-        inputField.delegate = self ///입력 칸 글자 수 카운트를 위한 delegate 설정
     }
     
     private func setUpNavigationBar() {
@@ -155,27 +145,16 @@ class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMap
         dismiss(animated: true, completion: nil)
     } ///뒤로 가기 버튼
     
-// MARK: - 입력 칸 글자 수 제한
-    internal func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let maxLength = 30
-        let currentString = (textField.text ?? "") as NSString
-        let newString = currentString.replacingCharacters(in: range, with: string)
+    @objc private func addLocation(){
+        
+        ///TextField의 Text를 불러와 서버에 넣는 함수. 또는 다음 뷰 컨트롤러에 데이터를 전달
+        
+        let rootVC = AddLocationViewController()
+        let navVC = UINavigationController(rootViewController: rootVC)
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true)
+    }
 
-        return newString.count <= maxLength
-    }
-// MARK: - 실시간 글자 수 계산
-    @objc func textFieldDidChange(textField : UITextField){
-        textCount = inputField.text!.count
-        textCountLabel.text = "\(String(describing: textCount))/30"
-        if(textCount > 0){
-            nextButton.backgroundColor = #colorLiteral(red: 1, green: 0.4265864491, blue: 0.4015736282, alpha: 1)
-            nextButton.isEnabled = true
-        }else{
-            nextButton.backgroundColor = #colorLiteral(red: 0.8926360011, green: 0.8926360011, blue: 0.8926360011, alpha: 1)
-            nextButton.isEnabled = false
-        }
-    }
-    
 // MARK: - 다음으로 이동
     @objc private func didTapButton(){
         
@@ -186,4 +165,6 @@ class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMap
         navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: false)
     }
+    
+    
 }
