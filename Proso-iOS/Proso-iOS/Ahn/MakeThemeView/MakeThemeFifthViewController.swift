@@ -9,22 +9,23 @@ import Foundation
 import UIKit
 import SnapKit
 
-class MakeThemeSecondViewController: UIViewController, UITextViewDelegate, MTMapViewDelegate{
+class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMapViewDelegate{
         
     var mapview: MTMapView!
     
 // MARK: - 구성 요소 추가
+    
     let progressBar: UIProgressView = { ///진행 뷰
         let progressView = UIProgressView()
         progressView.progressViewStyle = .bar
         progressView.progressTintColor = #colorLiteral(red: 1, green: 0.4265864491, blue: 0.4015736282, alpha: 1)
-        progressView.progress = 0.33
+        progressView.progress = 0.83
         return progressView
     }()
     
     let themeQustion: UILabel = { ///테마 만들기 질문
         let label = UILabel()
-        label.text = "테마 소개글을 입력해주세요."
+        label.text = "테마 이름을 입력해주세요."
         label.font = UIFont.boldSystemFont(ofSize: 18.0)
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.2
@@ -32,18 +33,32 @@ class MakeThemeSecondViewController: UIViewController, UITextViewDelegate, MTMap
         return label
     }()
     
-    let inputField: UITextView = { ///textfield는 여러 줄 처리가 불가능하므로 textView로 대체
-        let textView = UITextView()
+    let inputField: UITextField = { ///사용자 입력 칸, 디자인이 밑줄 형태이므로 frame 커스텀화
+        let textField = UITextField()
         
-        textView.isEditable = true
-        textView.layer.borderColor = #colorLiteral(red: 0.8861967921, green: 0.8861967921, blue: 0.8861967921, alpha: 1)
-        textView.font = UIFont.systemFont(ofSize: 14)
-        textView.layer.borderWidth = CGFloat(1.0)
-        textView.layer.cornerRadius = CGFloat(8.0)
-        textView.textContainerInset = UIEdgeInsets(top: 16, left: 12, bottom: 16, right: 12);
+        textField.placeholder = "내용 입력"
+        textField.font = UIFont.boldSystemFont(ofSize: 14.0)
+        textField.adjustsFontSizeToFitWidth = true
 
+        return textField
+    }()
+    
+    let inputFieldUnderLine: UIView = {
+        let textFieldLine = UIView()
+        textFieldLine.backgroundColor = #colorLiteral(red: 0.8861967921, green: 0.8861967921, blue: 0.8861967921, alpha: 1)
         
-        return textView
+        return textFieldLine
+    }()
+    
+    let textCountLabel: UILabel = { ///입력 글자 수 표시 (입력칸 아래에)
+        let label = UILabel()
+        label.text = "0/0"
+        label.font = UIFont.systemFont(ofSize: 12.0)
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.2
+        label.textColor = #colorLiteral(red: 0.4756370187, green: 0.4756369591, blue: 0.4756369591, alpha: 1)
+        
+        return label
     }()
     
     let nextButton: UIButton = { ///다음 버튼
@@ -87,9 +102,16 @@ class MakeThemeSecondViewController: UIViewController, UITextViewDelegate, MTMap
         
         inputField.snp.makeConstraints{
             $0.top.equalTo(themeQustion.snp.bottom).offset(24)
-            $0.height.equalTo(108)
+            $0.height.equalTo(20)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
+        }
+        
+        inputFieldUnderLine.snp.makeConstraints{
+            $0.height.equalTo(1)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.top.equalTo(inputField.snp.bottom).offset(8)
         }
         
         nextButton.snp.makeConstraints{
@@ -99,19 +121,22 @@ class MakeThemeSecondViewController: UIViewController, UITextViewDelegate, MTMap
             $0.height.equalTo(56)
         }
         
-        inputField.textColor = .lightGray
-        inputField.text = "내용 입력"
-    
+        textCountLabel.snp.makeConstraints{
+            $0.top.equalTo(inputFieldUnderLine.snp.bottom).offset(10)
+            $0.trailing.equalToSuperview().offset(-20)
+        }
         
-        nextButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        inputField.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged) ///글자 수 카운트를 위한 설정
+        
+        nextButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside) ///다음 버튼 활성화/비활성화를 위한 설정
     }
     
 // MARK: - 컴포넌트 추가 및 상단 네비게이션 바 설정
     private func addView(){
-        [progressBar,themeQustion,inputField,nextButton].forEach({
+        [progressBar,themeQustion,inputField,inputFieldUnderLine,textCountLabel,nextButton].forEach({
             self.view.addSubview($0)
         })
-        inputField.delegate = self ///입력 칸 글자 수 카운트
+        inputField.delegate = self ///입력 칸 글자 수 카운트를 위한 delegate 설정
     }
     
     private func setUpNavigationBar() {
@@ -128,11 +153,20 @@ class MakeThemeSecondViewController: UIViewController, UITextViewDelegate, MTMap
     
     @objc func dismissSelf(){
         dismiss(animated: true, completion: nil)
-    }
+    } ///뒤로 가기 버튼
     
-// MARK: - 버튼 활성화/비활성화
-    func textViewDidChange(_ textView: UITextView) {
-        let textCount = inputField.text!.count
+// MARK: - 입력 칸 글자 수 제한
+    internal func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = 30
+        let currentString = (textField.text ?? "") as NSString
+        let newString = currentString.replacingCharacters(in: range, with: string)
+
+        return newString.count <= maxLength
+    }
+// MARK: - 실시간 글자 수 계산
+    @objc func textFieldDidChange(textField : UITextField){
+        textCount = inputField.text!.count
+        textCountLabel.text = "\(String(describing: textCount))/30"
         if(textCount > 0){
             nextButton.backgroundColor = #colorLiteral(red: 1, green: 0.4265864491, blue: 0.4015736282, alpha: 1)
             nextButton.isEnabled = true
@@ -142,37 +176,14 @@ class MakeThemeSecondViewController: UIViewController, UITextViewDelegate, MTMap
         }
     }
     
-// MARK: - TextView Placeholder 설정
-    func textViewDidBeginEditing (_ textView: UITextView) {
-        if inputField.textColor == .lightGray && inputField.isFirstResponder {
-            inputField.text = nil
-            inputField.textColor = .black
-        }
-    }
-    
-    func textViewDidEndEditing (_ textView: UITextView) {
-        if inputField.text.isEmpty || inputField.text == "" {
-            inputField.textColor = .lightGray
-            inputField.text = "내용 입력"
-        }
-    }
-    
 // MARK: - 다음으로 이동
     @objc private func didTapButton(){
         
-        ///TextView의 Text를 불러와 서버에 넣는 코드. 또는 다음 뷰 컨트롤러에 정보 전달
-
-        let rootVC = MakeThemeThirdViewController()
+        ///TextField의 Text를 불러와 서버에 넣는 함수. 또는 다음 뷰 컨트롤러에 데이터를 전달
+        
+        let rootVC = MakeThemeSecondViewController()
         let navVC = UINavigationController(rootViewController: rootVC)
         navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: false)
-    }
-}
-
-extension UITextField {
-    func setLeftPaddingPoints(){
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.frame.size.height))
-        self.leftView = paddingView
-        self.leftViewMode = .always
     }
 }

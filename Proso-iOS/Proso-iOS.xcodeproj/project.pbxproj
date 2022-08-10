@@ -16,6 +16,7 @@
 		3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */; };
 		3F9E4CED289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */; };
 		3FD2F14F28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2F14E28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift */; };
+		3FD2F15128A3C99900E7C0D4 /* MakeThemeFifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2F15028A3C99900E7C0D4 /* MakeThemeFifthViewController.swift */; };
 		D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE98F2892AA76000C60F3 /* AppDelegate.swift */; };
 		D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE9912892AA76000C60F3 /* SceneDelegate.swift */; };
 		D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE9932892AA76000C60F3 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFirstViewController.swift; sourceTree = "<group>"; };
 		3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeThemeSecondViewController.swift; sourceTree = "<group>"; };
 		3FD2F14E28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFourthViewController.swift; sourceTree = "<group>"; };
+		3FD2F15028A3C99900E7C0D4 /* MakeThemeFifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFifthViewController.swift; sourceTree = "<group>"; };
 		578893027E657D957566D666 /* Pods-Proso-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proso-iOS.release.xcconfig"; path = "Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		8D85B76EC65DDD18676860BC /* Pods_Proso_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proso_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45DE98C2892AA76000C60F3 /* Proso-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Proso-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 				3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */,
 				3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */,
 				3F3380D828A0345000F39197 /* MakeThemeThirdViewController.swift */,
+				3FD2F15028A3C99900E7C0D4 /* MakeThemeFifthViewController.swift */,
 				3FD2F14E28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift */,
 			);
 			path = MakeThemeView;
@@ -304,6 +307,7 @@
 			files = (
 				3F3380D928A0345000F39197 /* MakeThemeThirdViewController.swift in Sources */,
 				3FD2F14F28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift in Sources */,
+				3FD2F15128A3C99900E7C0D4 /* MakeThemeFifthViewController.swift in Sources */,
 				3F3380DD28A2040F00F39197 /* HashTagCollectionViewCell.swift in Sources */,
 				D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */,
 				3F9E4CED289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift in Sources */,

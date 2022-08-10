@@ -20,7 +20,7 @@ class MakeThemeFirstViewController: UIViewController, UITextFieldDelegate, MTMap
         let progressView = UIProgressView()
         progressView.progressViewStyle = .bar
         progressView.progressTintColor = #colorLiteral(red: 1, green: 0.4265864491, blue: 0.4015736282, alpha: 1)
-        progressView.progress = 0.2
+        progressView.progress = 0.165
         return progressView
     }()
     
