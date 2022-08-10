@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class MakeThemeSecondViewController: UIViewController, UITextFieldDelegate, MTMapViewDelegate, UITextViewDelegate{
+class MakeThemeSecondViewController: UIViewController, UITextViewDelegate, MTMapViewDelegate{
         
     var mapview: MTMapView!
     
