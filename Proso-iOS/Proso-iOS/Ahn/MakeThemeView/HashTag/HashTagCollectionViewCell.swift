@@ -45,7 +45,7 @@ final class FoodCell: UICollectionViewCell {
         }
         
     }
-    func setup(with hashTag: HashTag) { ///컬렉션 뷰에서 셀들을 불러올 때, 각 해쉬태그 카테고리별로 분류하여 셀들의 텍스트를 설정
+    func setup(with hashTag: MakeThemeDefaultHashTag) { ///컬렉션 뷰에서 셀들을 불러올 때, 각 해쉬태그 카테고리별로 분류하여 셀들의 텍스트를 설정
         foodLabel.text = hashTag.context
     }
     
@@ -88,7 +88,7 @@ final class CafeCell: UICollectionViewCell {
         }
         
     }
-    func setup(with hashTag: HashTag) {
+    func setup(with hashTag: MakeThemeDefaultHashTag) {
         cafeLabel.text = hashTag.context
     }
     
@@ -132,7 +132,7 @@ final class ActivityCell: UICollectionViewCell {
         }
         
     }
-    func setup(with hashTag: HashTag) {
+    func setup(with hashTag: MakeThemeDefaultHashTag) {
         activityLabel.text = hashTag.context
     }
     

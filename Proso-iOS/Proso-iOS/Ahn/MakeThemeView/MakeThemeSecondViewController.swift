@@ -87,10 +87,10 @@ class MakeThemeSecondViewController: UIViewController, UITextViewDelegate, MTMap
         
         inputField.snp.makeConstraints{
             $0.top.equalTo(themeQustion.snp.bottom).offset(24)
-            $0.height.equalTo(108)
-            $0.leading.equalToSuperview().offset(20)
-            $0.trailing.equalToSuperview().offset(-20)
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
+        
+        inputField.heightAnchor.constraint(equalTo: inputField.widthAnchor, multiplier: 105/335).isActive = true
         
         nextButton.snp.makeConstraints{
             $0.leading.equalToSuperview().offset(20)

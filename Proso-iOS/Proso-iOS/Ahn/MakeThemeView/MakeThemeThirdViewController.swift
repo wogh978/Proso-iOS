@@ -14,9 +14,9 @@ class MakeThemeThirdViewController: UIViewController, UICollectionViewDelegate, 
     var mapview: MTMapView!
     var selectedCount = 0
     
-    var foodHashTags = HashTagModel().getHashTag("food")
-    var cafeHashTags = HashTagModel().getHashTag("cafe")
-    var activityHashTags = HashTagModel().getHashTag("activity")
+    var foodHashTags = MakeThemeDefaultHashTagModel().getDefaultHashTag("food")
+    var cafeHashTags = MakeThemeDefaultHashTagModel().getDefaultHashTag("cafe")
+    var activityHashTags = MakeThemeDefaultHashTagModel().getDefaultHashTag("activity")
     
 // MARK: - 구성 요소 추가
     let progressBar: UIProgressView = { ///진행 뷰

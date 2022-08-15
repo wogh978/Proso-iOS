@@ -11,10 +11,15 @@
 		3F03D0D628A3D0DD002BA397 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03D0D528A3D0DD002BA397 /* AddLocationViewController.swift */; };
 		3F03D0D828A3DA9C002BA397 /* MakeThemeCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03D0D728A3DA9C002BA397 /* MakeThemeCompleteViewController.swift */; };
 		3F3380D928A0345000F39197 /* MakeThemeThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3380D828A0345000F39197 /* MakeThemeThirdViewController.swift */; };
-		3F3380DB28A113B500F39197 /* HashTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3380DA28A113B500F39197 /* HashTagModel.swift */; };
+		3F3380DB28A113B500F39197 /* MakeThemeDefaultHashTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3380DA28A113B500F39197 /* MakeThemeDefaultHashTagModel.swift */; };
 		3F3380DD28A2040F00F39197 /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3380DC28A2040F00F39197 /* HashTagCollectionViewCell.swift */; };
-		3F6E8D5F289E303200AAA5C9 /* ThemeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E8D5E289E303200AAA5C9 /* ThemeMainViewController.swift */; };
-		3F6E8D64289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E8D63289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift */; };
+		3F6C16AF28A8E02F006B1717 /* RisingThemeSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C16AE28A8E02F006B1717 /* RisingThemeSampleModel.swift */; };
+		3F6C16B228A936AD006B1717 /* ThemeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C16B128A936AD006B1717 /* ThemeViewCell.swift */; };
+		3F6C16B428AA8AB6006B1717 /* PopularThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C16B328AA8AB6006B1717 /* PopularThemeCollectionViewCell.swift */; };
+		3F6C16B628AAA8EA006B1717 /* PopularThemeSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C16B528AAA8EA006B1717 /* PopularThemeSampleModel.swift */; };
+		3F6C16B828AAB87C006B1717 /* RankThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C16B728AAB87C006B1717 /* RankThemeTableViewCell.swift */; };
+		3F6C16BA28AABC91006B1717 /* RankThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C16B928AABC91006B1717 /* RankThemeData.swift */; };
+		3F6E8D5F289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E8D5E289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift */; };
 		3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */; };
 		3F9E4CED289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */; };
 		3FD2F14F28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2F14E28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift */; };
@@ -38,10 +43,15 @@
 		3F03D0D528A3D0DD002BA397 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		3F03D0D728A3DA9C002BA397 /* MakeThemeCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeCompleteViewController.swift; sourceTree = "<group>"; };
 		3F3380D828A0345000F39197 /* MakeThemeThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeThirdViewController.swift; sourceTree = "<group>"; };
-		3F3380DA28A113B500F39197 /* HashTagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagModel.swift; sourceTree = "<group>"; };
+		3F3380DA28A113B500F39197 /* MakeThemeDefaultHashTagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeDefaultHashTagModel.swift; sourceTree = "<group>"; };
 		3F3380DC28A2040F00F39197 /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
-		3F6E8D5E289E303200AAA5C9 /* ThemeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeMainViewController.swift; sourceTree = "<group>"; };
-		3F6E8D63289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularThemeScrollViewCell.swift; sourceTree = "<group>"; };
+		3F6C16AE28A8E02F006B1717 /* RisingThemeSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RisingThemeSampleModel.swift; sourceTree = "<group>"; };
+		3F6C16B128A936AD006B1717 /* ThemeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewCell.swift; sourceTree = "<group>"; };
+		3F6C16B328AA8AB6006B1717 /* PopularThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularThemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		3F6C16B528AAA8EA006B1717 /* PopularThemeSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularThemeSampleModel.swift; sourceTree = "<group>"; };
+		3F6C16B728AAB87C006B1717 /* RankThemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankThemeTableViewCell.swift; sourceTree = "<group>"; };
+		3F6C16B928AABC91006B1717 /* RankThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankThemeData.swift; sourceTree = "<group>"; };
+		3F6E8D5E289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSuggestionMainViewController.swift; sourceTree = "<group>"; };
 		3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFirstViewController.swift; sourceTree = "<group>"; };
 		3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeThemeSecondViewController.swift; sourceTree = "<group>"; };
 		3FD2F14E28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFourthViewController.swift; sourceTree = "<group>"; };
@@ -105,37 +115,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3F03D0D928A4AFB5002BA397 /* ThemeSuggestionView */ = {
+			isa = PBXGroup;
+			children = (
+				3F6E8D5E289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift */,
+				3F6C16B028A8E167006B1717 /* Model */,
+			);
+			path = ThemeSuggestionView;
+			sourceTree = "<group>";
+		};
+		3F6C16B028A8E167006B1717 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F6C16AE28A8E02F006B1717 /* RisingThemeSampleModel.swift */,
+				3F6C16B528AAA8EA006B1717 /* PopularThemeSampleModel.swift */,
+				3F6C16B128A936AD006B1717 /* ThemeViewCell.swift */,
+				3F6C16B328AA8AB6006B1717 /* PopularThemeCollectionViewCell.swift */,
+				3F6C16B728AAB87C006B1717 /* RankThemeTableViewCell.swift */,
+				3F6C16B928AABC91006B1717 /* RankThemeData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3F6E8D5D289E300000AAA5C9 /* Ahn */ = {
 			isa = PBXGroup;
 			children = (
-				3F6E8D5E289E303200AAA5C9 /* ThemeMainViewController.swift */,
-				3F6E8D62289E3F2D00AAA5C9 /* Model */,
-				3F6E8D65289E41BF00AAA5C9 /* View */,
+				3F03D0D928A4AFB5002BA397 /* ThemeSuggestionView */,
 				3F8656BD289E5D85000909D3 /* MakeThemeView */,
 			);
 			path = Ahn;
 			sourceTree = "<group>";
 		};
-		3F6E8D62289E3F2D00AAA5C9 /* Model */ = {
+		3F6E8D62289E3F2D00AAA5C9 /* HashTag */ = {
 			isa = PBXGroup;
 			children = (
-				3F3380DA28A113B500F39197 /* HashTagModel.swift */,
+				3F3380DA28A113B500F39197 /* MakeThemeDefaultHashTagModel.swift */,
 				3F3380DC28A2040F00F39197 /* HashTagCollectionViewCell.swift */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		3F6E8D65289E41BF00AAA5C9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3F6E8D63289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift */,
-			);
-			path = View;
+			path = HashTag;
 			sourceTree = "<group>";
 		};
 		3F8656BD289E5D85000909D3 /* MakeThemeView */ = {
 			isa = PBXGroup;
 			children = (
+				3F6E8D62289E3F2D00AAA5C9 /* HashTag */,
 				3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */,
 				3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */,
 				3F3380D828A0345000F39197 /* MakeThemeThirdViewController.swift */,
@@ -313,18 +336,23 @@
 			files = (
 				3F3380D928A0345000F39197 /* MakeThemeThirdViewController.swift in Sources */,
 				3FD2F14F28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift in Sources */,
+				3F6C16B628AAA8EA006B1717 /* PopularThemeSampleModel.swift in Sources */,
 				3FD2F15128A3C99900E7C0D4 /* MakeThemeFifthViewController.swift in Sources */,
 				3F3380DD28A2040F00F39197 /* HashTagCollectionViewCell.swift in Sources */,
+				3F6C16B828AAB87C006B1717 /* RankThemeTableViewCell.swift in Sources */,
 				D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */,
 				3F03D0D628A3D0DD002BA397 /* AddLocationViewController.swift in Sources */,
 				3F9E4CED289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift in Sources */,
 				3F03D0D828A3DA9C002BA397 /* MakeThemeCompleteViewController.swift in Sources */,
 				D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */,
 				3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */,
-				3F3380DB28A113B500F39197 /* HashTagModel.swift in Sources */,
+				3F3380DB28A113B500F39197 /* MakeThemeDefaultHashTagModel.swift in Sources */,
+				3F6C16B228A936AD006B1717 /* ThemeViewCell.swift in Sources */,
+				3F6C16BA28AABC91006B1717 /* RankThemeData.swift in Sources */,
+				3F6C16B428AA8AB6006B1717 /* PopularThemeCollectionViewCell.swift in Sources */,
 				D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */,
-				3F6E8D5F289E303200AAA5C9 /* ThemeMainViewController.swift in Sources */,
-				3F6E8D64289E41B800AAA5C9 /* PopularThemeScrollViewCell.swift in Sources */,
+				3F6E8D5F289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift in Sources */,
+				3F6C16AF28A8E02F006B1717 /* RisingThemeSampleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

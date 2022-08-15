@@ -164,9 +164,8 @@ class MakeThemeFifthViewController: UIViewController, UITextFieldDelegate, MTMap
         ///TextField의 Text를 불러와 서버에 넣는 함수. 또는 다음 뷰 컨트롤러에 데이터를 전달
         
         let rootVC = MakeThemeCompleteViewController()
-        let navVC = UINavigationController(rootViewController: rootVC)
-        navVC.modalPresentationStyle = .fullScreen
-        present(navVC, animated: false)
+        self.navigationController?.pushViewController(rootVC, animated: true)
+
     }
     
     

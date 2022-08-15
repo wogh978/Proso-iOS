@@ -14,7 +14,6 @@ class ViewController: UIViewController,MTMapViewDelegate {
     var mapView: MTMapView!
     
     let button = UIButton() ///TEST
-    let makeThemeFirstViewController = MakeThemeFirstViewController() ///TEST
 
        override func viewDidLoad() {
            super.viewDidLoad()
@@ -30,10 +29,9 @@ class ViewController: UIViewController,MTMapViewDelegate {
        }
     
     @objc private func didTapButton(){
-        let rootVC = makeThemeFirstViewController
-        let navVC = UINavigationController(rootViewController: rootVC)
-        navVC.modalPresentationStyle = .fullScreen
-        present(navVC, animated: true)
+        let rootVC = ThemeSuggestionMainViewController()
+        self.navigationController?.pushViewController(rootVC, animated: true)
+
     }
 // MARK: - TEST
 
