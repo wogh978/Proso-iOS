@@ -36,11 +36,6 @@ class RankThemeTableViewCell: UITableViewCell {
     }
     
     func setUpCell() {
-        rankLabel = UILabel()
-        rankImg = UIImageView()
-        rankTitle = UILabel()
-        rankHeart = UIImageView()
-        rankHeartCount = UILabel()
         
         [rankLabel,rankImg,rankTitle,rankHeart,rankHeartCount].forEach({
             contentView.addSubview($0)

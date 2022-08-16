@@ -9,22 +9,22 @@ import Foundation
 import UIKit
 
 
-
-
 struct RisingThemeSampleModel{
     let risingThemeUserProfileImage = UIImage(named: "defaultProfile")
     let risingThemeUserName = "비니"
     let risingThemeHeartCount = 52
     
-
-    let risingThemeCategory = "카페 / 음식점"
-    let risingThemeTitle = "우리 더울 때는 나가지 말고 카페에 있어요."
-    let risingThemeSampleHashTag = [
-        "감성 있는",
-        "카페",
-        "디저트 맛집"
-    ]
-    let risingThemeImage = UIImage(named: "risingTheme_example1")
+    
+    
+    let risingTheme = ThemeModel(category: "카페 / 음식점",
+                                 title: "우리 더울 때는 나가지 말고 카페에 있어요.",
+                                 hashtag:
+                                    [
+                                    "감성 있는",
+                                    "카페",
+                                    "디저트 맛집"
+                                    ],
+                                 image: UIImage(named: "risingTheme_example1") ?? UIImage())
     
     func getRisingThemeUserInfo(_ name: String) -> Any?{
         switch(name){
@@ -42,13 +42,13 @@ struct RisingThemeSampleModel{
     func getRisingThemeContextInfo(_ name: String) -> Any?{
         switch(name){
         case "category":
-            return risingThemeCategory
+            return risingTheme.ThemeCategory
         case "title":
-            return risingThemeTitle
+            return risingTheme.ThemeTitle
         case "HashTag":
-            return risingThemeSampleHashTag
+            return risingTheme.ThemeHashTag
         case "image":
-            return risingThemeImage
+            return risingTheme.ThemeImage
         default:
             return nil
         }

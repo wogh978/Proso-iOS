@@ -78,12 +78,12 @@ class ThemeSuggestionMainViewController: UIViewController{
     let risingThemeInfoView = UIView()
     
     let risingThemeInfoCell: UIView = {
-        let risingTheme = RisingThemeSampleModel()
+        let risingThemeSample = RisingThemeSampleModel()
         
-        let image = risingTheme.risingThemeImage ?? UIImage()
-        let title = risingTheme.risingThemeTitle
-        let category = risingTheme.risingThemeCategory
-        let hashtag = risingTheme.risingThemeSampleHashTag
+        let image = risingThemeSample.risingTheme.ThemeImage 
+        let title = risingThemeSample.risingTheme.ThemeTitle
+        let category = risingThemeSample.risingTheme.ThemeCategory
+        let hashtag = risingThemeSample.risingTheme.ThemeHashTag
         
         let view = makeCellView(image, category, title, hashtag)
         return view
@@ -129,12 +129,12 @@ class ThemeSuggestionMainViewController: UIViewController{
         return label
     }()
     
-    let popularThemeRankView: UITableView = {
+    /*let popularThemeRankView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .red
         tableView.separatorStyle = .none
         return tableView
-    }()
+    }()*/
     
         
     
@@ -143,7 +143,7 @@ class ThemeSuggestionMainViewController: UIViewController{
         
        
         collectionViewDelegate()
-        tableViewDelegate()
+        //tableViewDelegate()
         setUpNavigationBar()
         setUserInfoView()
         addView()
@@ -155,18 +155,18 @@ class ThemeSuggestionMainViewController: UIViewController{
     private func collectionViewDelegate(){
         popularThemeCollectionView.dataSource = self
         popularThemeCollectionView.delegate = self
-        popularThemeCollectionView.register(ThemeCell.self, forCellWithReuseIdentifier: ThemeCell.identifier)
+        popularThemeCollectionView.register(ThemeCollectionViewCell.self, forCellWithReuseIdentifier: ThemeCollectionViewCell.identifier)
     }
     
-    private func tableViewDelegate(){
+    /*private func tableViewDelegate(){
         popularThemeRankView.delegate = self
         popularThemeRankView.dataSource = self
         popularThemeRankView.register(RankThemeTableViewCell.classForCoder(), forCellReuseIdentifier: "cellIdentifier")
-    }
+    }*/
     
    
     private func addView(){
-        [searchField,risingThemeSectionLabel,risingThemeIntroduction,risingThemeInfoView, risingThemeInfoCell,popularThemeSectionLabel,popularThemeIntroduction,popularThemeCollectionView, popularThemeRankLabel,popularThemeRankView].forEach({
+        [searchField,risingThemeSectionLabel,risingThemeIntroduction,risingThemeInfoView, risingThemeInfoCell,popularThemeSectionLabel,popularThemeIntroduction,popularThemeCollectionView, popularThemeRankLabel].forEach({
             contentView.addSubview($0)
         })
         mainScrollView.addSubview(contentView)
@@ -226,26 +226,23 @@ class ThemeSuggestionMainViewController: UIViewController{
         popularThemeCollectionView.snp.makeConstraints{
             $0.top.equalTo(popularThemeIntroduction.snp.bottom).offset(16)
             $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
         popularThemeCollectionView.heightAnchor.constraint(equalTo: popularThemeCollectionView.widthAnchor, multiplier: 189/375).isActive = true
         
-        popularThemeRankLabel.snp.makeConstraints{
-            $0.top.equalTo(popularThemeCollectionView.snp.bottom).offset(48)
-            $0.leading.equalToSuperview().offset(20)
-        }
-        popularThemeRankView.snp.makeConstraints{
+        
+        /*popularThemeRankView.snp.makeConstraints{
             $0.top.equalTo(popularThemeRankLabel.snp.bottom).offset(12)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.bottom.equalToSuperview()
         }
-        popularThemeRankView.heightAnchor.constraint(equalTo: popularThemeRankView.widthAnchor, multiplier: 192/335).isActive = true
+        popularThemeRankView.heightAnchor.constraint(equalTo: popularThemeRankView.widthAnchor, multiplier: 192/335).isActive = true*/
     }
     
     
     
     private func setUpNavigationBar() {
         
-        title = "테마 만들기"
         let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward")?
             .withTintColor(.black, renderingMode: .alwaysOriginal),
                                          style: .plain,
@@ -253,6 +250,18 @@ class ThemeSuggestionMainViewController: UIViewController{
                                          action: #selector(dismissSelf))
         navigationItem.leftBarButtonItem = backButton
         
+        let makeThemeButton = UIBarButtonItem(image: UIImage(systemName: "plus.circle")?
+            .withTintColor(.black, renderingMode: .alwaysOriginal),
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(gotoMakeTheme))
+        
+        let notificationButton = UIBarButtonItem(image: UIImage(systemName: "bell.badge")?
+            .withTintColor(.black, renderingMode: .alwaysOriginal),
+                                         style: .plain,
+                                         target: self,
+                                         action: nil)
+        navigationItem.rightBarButtonItems = [notificationButton,makeThemeButton]
         view.backgroundColor = .white
         
         ///그림자 추가하려고 하면 자꾸 글자 쪽에 추가되는 바람에 일단 보류.
@@ -262,6 +271,10 @@ class ThemeSuggestionMainViewController: UIViewController{
         dismiss(animated: true, completion: nil)
     }
     
+    @objc func gotoMakeTheme(){
+        let rootVC = MakeThemeFirstViewController()
+        self.navigationController?.pushViewController(rootVC, animated: true)
+    }
     private func setUserInfoView(){
         let risingTheme = RisingThemeSampleModel()
         
@@ -343,7 +356,7 @@ extension ThemeSuggestionMainViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThemeCell.identifier, for: indexPath) as! ThemeCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThemeCollectionViewCell.identifier, for: indexPath) as! ThemeCollectionViewCell
 
         
         let theme = popularTheme[indexPath.row] ///음식 컬렉션 뷰이므로 음식 해쉬태그 배열 불러옴, indexPath.row로 Index 지정
@@ -365,7 +378,7 @@ extension ThemeSuggestionMainViewController: UICollectionViewDelegateFlowLayout 
 
 }
 
-extension ThemeSuggestionMainViewController: UITableViewDelegate, UITableViewDataSource {
+/*extension ThemeSuggestionMainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rankTheme.SampleRank.count
@@ -385,4 +398,4 @@ extension ThemeSuggestionMainViewController: UITableViewDelegate, UITableViewDat
         return view.frame.width * 64/375
     }
     
-}
+}*/

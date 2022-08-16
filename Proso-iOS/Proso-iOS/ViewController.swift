@@ -29,7 +29,7 @@ class ViewController: UIViewController,MTMapViewDelegate {
        }
     
     @objc private func didTapButton(){
-        let rootVC = ThemeSuggestionMainViewController()
+        let rootVC = ThemeSuggestionSearchViewController()
         self.navigationController?.pushViewController(rootVC, animated: true)
 
     }
