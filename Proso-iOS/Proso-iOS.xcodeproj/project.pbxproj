@@ -24,6 +24,7 @@
 		3FC029A928ACB7C7005397E3 /* ProvinceMeetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029A828ACB7C7005397E3 /* ProvinceMeetViewController.swift */; };
 		3FC029AB28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029AA28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift */; };
 		3FC029AD28ACEC30005397E3 /* FriendListSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029AC28ACEC30005397E3 /* FriendListSampleModel.swift */; };
+		3FC029AF28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029AE28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift */; };
 		3FC846FD28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC846FC28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift */; };
 		3FC846FF28AB54A60020DA29 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC846FE28AB54A60020DA29 /* UIColorExtension.swift */; };
 		3FC8470328AB725D0020DA29 /* ThemeSearchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8470228AB725D0020DA29 /* ThemeSearchDataModel.swift */; };
@@ -64,6 +65,7 @@
 		3FC029A828ACB7C7005397E3 /* ProvinceMeetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceMeetViewController.swift; sourceTree = "<group>"; };
 		3FC029AA28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceMeetTableViewCell.swift; sourceTree = "<group>"; };
 		3FC029AC28ACEC30005397E3 /* FriendListSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListSampleModel.swift; sourceTree = "<group>"; };
+		3FC029AE28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceMeetCompletedViewController.swift; sourceTree = "<group>"; };
 		3FC846FC28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSuggestionSearchViewController.swift; sourceTree = "<group>"; };
 		3FC846FE28AB54A60020DA29 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3FC8470228AB725D0020DA29 /* ThemeSearchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSearchDataModel.swift; sourceTree = "<group>"; };
@@ -138,6 +140,8 @@
 				3FC846FC28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift */,
 				3FC8470828AC948F0020DA29 /* ThemeInfoViewController.swift */,
 				3FC029A828ACB7C7005397E3 /* ProvinceMeetViewController.swift */,
+				3FC029AE28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift */,
+				3FC029B028AD0916005397E3 /* Cell */,
 				3F6C16B028A8E167006B1717 /* Model */,
 			);
 			path = ThemeSuggestionView;
@@ -150,11 +154,7 @@
 				3F6C16AE28A8E02F006B1717 /* RisingThemeSampleModel.swift */,
 				3F6C16B528AAA8EA006B1717 /* PopularThemeSampleModel.swift */,
 				3F6C16B928AABC91006B1717 /* RankThemeDataModel.swift */,
-				3F6C16B128A936AD006B1717 /* ThemeCollectionViewCell.swift */,
-				3F6C16B728AAB87C006B1717 /* RankThemeTableViewCell.swift */,
 				3FC8470228AB725D0020DA29 /* ThemeSearchDataModel.swift */,
-				3FC8470628AC04580020DA29 /* SearchByOrderCollectionViewCell.swift */,
-				3FC029AA28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift */,
 				3FC029AC28ACEC30005397E3 /* FriendListSampleModel.swift */,
 			);
 			path = Model;
@@ -192,6 +192,17 @@
 				3F03D0D528A3D0DD002BA397 /* AddLocationViewController.swift */,
 			);
 			path = MakeThemeView;
+			sourceTree = "<group>";
+		};
+		3FC029B028AD0916005397E3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3F6C16B128A936AD006B1717 /* ThemeCollectionViewCell.swift */,
+				3F6C16B728AAB87C006B1717 /* RankThemeTableViewCell.swift */,
+				3FC8470628AC04580020DA29 /* SearchByOrderCollectionViewCell.swift */,
+				3FC029AA28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		706D623536C89205CBA9C074 /* Pods */ = {
@@ -359,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC846FD28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift in Sources */,
+				3FC029AF28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift in Sources */,
 				3F3380D928A0345000F39197 /* MakeThemeThirdViewController.swift in Sources */,
 				3FD2F14F28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift in Sources */,
 				3F6C16B628AAA8EA006B1717 /* PopularThemeSampleModel.swift in Sources */,

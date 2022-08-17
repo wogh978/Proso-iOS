@@ -29,7 +29,7 @@ class ViewController: UIViewController,MTMapViewDelegate {
        }
     
     @objc private func didTapButton(){
-        let rootVC = ProvinceMeetViewController()
+        let rootVC = ProvinceMeetCompletedViewController()
         self.navigationController?.pushViewController(rootVC, animated: true)
 
     }

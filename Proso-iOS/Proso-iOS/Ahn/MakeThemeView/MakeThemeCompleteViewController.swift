@@ -23,7 +23,6 @@ class MakeThemeCompleteViewController: UIViewController {
         let label = UILabel()
         label.text = "테마 작성이\n완료되었어요!"
         label.font = UIFont.boldSystemFont(ofSize: 24.0)
-        label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
@@ -37,6 +36,9 @@ class MakeThemeCompleteViewController: UIViewController {
                                 value: paragraphStyle,
                                 range: NSMakeRange(0, attrString.length))
         label.attributedText = attrString
+        label.textAlignment = .center
+
+        
         
         return label
     }()
