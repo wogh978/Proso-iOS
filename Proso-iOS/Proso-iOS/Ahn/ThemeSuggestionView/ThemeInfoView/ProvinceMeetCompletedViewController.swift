@@ -63,7 +63,7 @@ class ProvinceMeetCompletedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationBar()
+        self.navigationController?.setUpNavigationItems(items: [.back])
         addView()
         setAttrbutes()
 
@@ -79,7 +79,7 @@ class ProvinceMeetCompletedViewController: UIViewController {
     
     private func setAttrbutes(){
         completeLabel.snp.makeConstraints{
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(80)
+            $0.top.equalToSuperview().offset(80)
             $0.centerX.equalToSuperview()
         }
         

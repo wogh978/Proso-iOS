@@ -25,10 +25,13 @@
 		3FC029AB28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029AA28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift */; };
 		3FC029AD28ACEC30005397E3 /* FriendListSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029AC28ACEC30005397E3 /* FriendListSampleModel.swift */; };
 		3FC029AF28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029AE28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift */; };
+		3FC029B328AD0CCC005397E3 /* CommonEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029B228AD0CCC005397E3 /* CommonEnum.swift */; };
+		3FC029B528AD0CEE005397E3 /* UINavigationViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029B428AD0CEE005397E3 /* UINavigationViewControllerExtension.swift */; };
+		3FC029B728AD0D05005397E3 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029B628AD0D05005397E3 /* UIViewControllerExtension.swift */; };
 		3FC846FD28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC846FC28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift */; };
 		3FC846FF28AB54A60020DA29 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC846FE28AB54A60020DA29 /* UIColorExtension.swift */; };
 		3FC8470328AB725D0020DA29 /* ThemeSearchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8470228AB725D0020DA29 /* ThemeSearchDataModel.swift */; };
-		3FC8470528AB72D90020DA29 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8470428AB72D90020DA29 /* ThemeModel.swift */; };
+		3FC8470528AB72D90020DA29 /* BasicThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8470428AB72D90020DA29 /* BasicThemeModel.swift */; };
 		3FC8470728AC04580020DA29 /* SearchByOrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8470628AC04580020DA29 /* SearchByOrderCollectionViewCell.swift */; };
 		3FC8470928AC948F0020DA29 /* ThemeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8470828AC948F0020DA29 /* ThemeInfoViewController.swift */; };
 		3FD2F14F28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2F14E28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift */; };
@@ -66,10 +69,13 @@
 		3FC029AA28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceMeetTableViewCell.swift; sourceTree = "<group>"; };
 		3FC029AC28ACEC30005397E3 /* FriendListSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListSampleModel.swift; sourceTree = "<group>"; };
 		3FC029AE28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceMeetCompletedViewController.swift; sourceTree = "<group>"; };
+		3FC029B228AD0CCC005397E3 /* CommonEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEnum.swift; sourceTree = "<group>"; };
+		3FC029B428AD0CEE005397E3 /* UINavigationViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationViewControllerExtension.swift; sourceTree = "<group>"; };
+		3FC029B628AD0D05005397E3 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		3FC846FC28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSuggestionSearchViewController.swift; sourceTree = "<group>"; };
 		3FC846FE28AB54A60020DA29 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3FC8470228AB725D0020DA29 /* ThemeSearchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSearchDataModel.swift; sourceTree = "<group>"; };
-		3FC8470428AB72D90020DA29 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		3FC8470428AB72D90020DA29 /* BasicThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicThemeModel.swift; sourceTree = "<group>"; };
 		3FC8470628AC04580020DA29 /* SearchByOrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByOrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FC8470828AC948F0020DA29 /* ThemeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeInfoViewController.swift; sourceTree = "<group>"; };
 		3FD2F14E28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFourthViewController.swift; sourceTree = "<group>"; };
@@ -138,9 +144,7 @@
 			children = (
 				3F6E8D5E289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift */,
 				3FC846FC28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift */,
-				3FC8470828AC948F0020DA29 /* ThemeInfoViewController.swift */,
-				3FC029A828ACB7C7005397E3 /* ProvinceMeetViewController.swift */,
-				3FC029AE28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift */,
+				3FC029BA28AD0ED7005397E3 /* ThemeInfoView */,
 				3FC029B028AD0916005397E3 /* Cell */,
 				3F6C16B028A8E167006B1717 /* Model */,
 			);
@@ -150,10 +154,8 @@
 		3F6C16B028A8E167006B1717 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3FC8470428AB72D90020DA29 /* ThemeModel.swift */,
-				3F6C16AE28A8E02F006B1717 /* RisingThemeSampleModel.swift */,
-				3F6C16B528AAA8EA006B1717 /* PopularThemeSampleModel.swift */,
-				3F6C16B928AABC91006B1717 /* RankThemeDataModel.swift */,
+				3FC8470428AB72D90020DA29 /* BasicThemeModel.swift */,
+				3FC029B828AD0DBF005397E3 /* ThemeMainPageModel */,
 				3FC8470228AB725D0020DA29 /* ThemeSearchDataModel.swift */,
 				3FC029AC28ACEC30005397E3 /* FriendListSampleModel.swift */,
 			);
@@ -165,7 +167,6 @@
 			children = (
 				3F03D0D928A4AFB5002BA397 /* ThemeSuggestionView */,
 				3F8656BD289E5D85000909D3 /* MakeThemeView */,
-				3FC846FE28AB54A60020DA29 /* UIColorExtension.swift */,
 			);
 			path = Ahn;
 			sourceTree = "<group>";
@@ -197,12 +198,51 @@
 		3FC029B028AD0916005397E3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				3F6C16B128A936AD006B1717 /* ThemeCollectionViewCell.swift */,
-				3F6C16B728AAB87C006B1717 /* RankThemeTableViewCell.swift */,
+				3FC029B928AD0DF6005397E3 /* ThemeMainPageCell */,
 				3FC8470628AC04580020DA29 /* SearchByOrderCollectionViewCell.swift */,
 				3FC029AA28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3FC029B128AD0CB7005397E3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3FC846FE28AB54A60020DA29 /* UIColorExtension.swift */,
+				3FC029B228AD0CCC005397E3 /* CommonEnum.swift */,
+				3FC029B428AD0CEE005397E3 /* UINavigationViewControllerExtension.swift */,
+				3FC029B628AD0D05005397E3 /* UIViewControllerExtension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3FC029B828AD0DBF005397E3 /* ThemeMainPageModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F6C16AE28A8E02F006B1717 /* RisingThemeSampleModel.swift */,
+				3F6C16B528AAA8EA006B1717 /* PopularThemeSampleModel.swift */,
+				3F6C16B928AABC91006B1717 /* RankThemeDataModel.swift */,
+			);
+			path = ThemeMainPageModel;
+			sourceTree = "<group>";
+		};
+		3FC029B928AD0DF6005397E3 /* ThemeMainPageCell */ = {
+			isa = PBXGroup;
+			children = (
+				3F6C16B128A936AD006B1717 /* ThemeCollectionViewCell.swift */,
+				3F6C16B728AAB87C006B1717 /* RankThemeTableViewCell.swift */,
+			);
+			path = ThemeMainPageCell;
+			sourceTree = "<group>";
+		};
+		3FC029BA28AD0ED7005397E3 /* ThemeInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				3FC8470828AC948F0020DA29 /* ThemeInfoViewController.swift */,
+				3FC029A828ACB7C7005397E3 /* ProvinceMeetViewController.swift */,
+				3FC029AE28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift */,
+			);
+			path = ThemeInfoView;
 			sourceTree = "<group>";
 		};
 		706D623536C89205CBA9C074 /* Pods */ = {
@@ -236,6 +276,7 @@
 		D45DE98E2892AA76000C60F3 /* Proso-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3FC029B128AD0CB7005397E3 /* Common */,
 				3F6E8D5D289E300000AAA5C9 /* Ahn */,
 				D45DE98F2892AA76000C60F3 /* AppDelegate.swift */,
 				D45DE9912892AA76000C60F3 /* SceneDelegate.swift */,
@@ -377,6 +418,7 @@
 				3FC029AD28ACEC30005397E3 /* FriendListSampleModel.swift in Sources */,
 				3FD2F15128A3C99900E7C0D4 /* MakeThemeFifthViewController.swift in Sources */,
 				3F3380DD28A2040F00F39197 /* HashTagCollectionViewCell.swift in Sources */,
+				3FC029B328AD0CCC005397E3 /* CommonEnum.swift in Sources */,
 				3F6C16B828AAB87C006B1717 /* RankThemeTableViewCell.swift in Sources */,
 				D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */,
 				3FC846FF28AB54A60020DA29 /* UIColorExtension.swift in Sources */,
@@ -386,16 +428,18 @@
 				3FC029A928ACB7C7005397E3 /* ProvinceMeetViewController.swift in Sources */,
 				3F9E4CED289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift in Sources */,
 				3F03D0D828A3DA9C002BA397 /* MakeThemeCompleteViewController.swift in Sources */,
+				3FC029B728AD0D05005397E3 /* UIViewControllerExtension.swift in Sources */,
 				3FC8470728AC04580020DA29 /* SearchByOrderCollectionViewCell.swift in Sources */,
 				3FC8470928AC948F0020DA29 /* ThemeInfoViewController.swift in Sources */,
 				D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */,
 				3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */,
-				3FC8470528AB72D90020DA29 /* ThemeModel.swift in Sources */,
+				3FC8470528AB72D90020DA29 /* BasicThemeModel.swift in Sources */,
 				3F3380DB28A113B500F39197 /* MakeThemeDefaultHashTagModel.swift in Sources */,
 				3F6C16B228A936AD006B1717 /* ThemeCollectionViewCell.swift in Sources */,
 				3F6C16BA28AABC91006B1717 /* RankThemeDataModel.swift in Sources */,
 				D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */,
 				3F6E8D5F289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift in Sources */,
+				3FC029B528AD0CEE005397E3 /* UINavigationViewControllerExtension.swift in Sources */,
 				3F6C16AF28A8E02F006B1717 /* RisingThemeSampleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
