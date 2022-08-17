@@ -21,11 +21,15 @@
 		3F6E8D5F289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E8D5E289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift */; };
 		3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */; };
 		3F9E4CED289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */; };
+		3FC029A928ACB7C7005397E3 /* ProvinceMeetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029A828ACB7C7005397E3 /* ProvinceMeetViewController.swift */; };
+		3FC029AB28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029AA28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift */; };
+		3FC029AD28ACEC30005397E3 /* FriendListSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC029AC28ACEC30005397E3 /* FriendListSampleModel.swift */; };
 		3FC846FD28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC846FC28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift */; };
 		3FC846FF28AB54A60020DA29 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC846FE28AB54A60020DA29 /* UIColorExtension.swift */; };
 		3FC8470328AB725D0020DA29 /* ThemeSearchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8470228AB725D0020DA29 /* ThemeSearchDataModel.swift */; };
 		3FC8470528AB72D90020DA29 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8470428AB72D90020DA29 /* ThemeModel.swift */; };
 		3FC8470728AC04580020DA29 /* SearchByOrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8470628AC04580020DA29 /* SearchByOrderCollectionViewCell.swift */; };
+		3FC8470928AC948F0020DA29 /* ThemeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8470828AC948F0020DA29 /* ThemeInfoViewController.swift */; };
 		3FD2F14F28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2F14E28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift */; };
 		3FD2F15128A3C99900E7C0D4 /* MakeThemeFifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2F15028A3C99900E7C0D4 /* MakeThemeFifthViewController.swift */; };
 		D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE98F2892AA76000C60F3 /* AppDelegate.swift */; };
@@ -57,11 +61,15 @@
 		3F6E8D5E289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSuggestionMainViewController.swift; sourceTree = "<group>"; };
 		3F8656BB289E5D7C000909D3 /* MakeThemeFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFirstViewController.swift; sourceTree = "<group>"; };
 		3F9E4CEC289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeThemeSecondViewController.swift; sourceTree = "<group>"; };
+		3FC029A828ACB7C7005397E3 /* ProvinceMeetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceMeetViewController.swift; sourceTree = "<group>"; };
+		3FC029AA28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceMeetTableViewCell.swift; sourceTree = "<group>"; };
+		3FC029AC28ACEC30005397E3 /* FriendListSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListSampleModel.swift; sourceTree = "<group>"; };
 		3FC846FC28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSuggestionSearchViewController.swift; sourceTree = "<group>"; };
 		3FC846FE28AB54A60020DA29 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3FC8470228AB725D0020DA29 /* ThemeSearchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSearchDataModel.swift; sourceTree = "<group>"; };
 		3FC8470428AB72D90020DA29 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		3FC8470628AC04580020DA29 /* SearchByOrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByOrderCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FC8470828AC948F0020DA29 /* ThemeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeInfoViewController.swift; sourceTree = "<group>"; };
 		3FD2F14E28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFourthViewController.swift; sourceTree = "<group>"; };
 		3FD2F15028A3C99900E7C0D4 /* MakeThemeFifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeThemeFifthViewController.swift; sourceTree = "<group>"; };
 		578893027E657D957566D666 /* Pods-Proso-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proso-iOS.release.xcconfig"; path = "Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +136,8 @@
 			children = (
 				3F6E8D5E289E303200AAA5C9 /* ThemeSuggestionMainViewController.swift */,
 				3FC846FC28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift */,
-				3FC8470628AC04580020DA29 /* SearchByOrderCollectionViewCell.swift */,
+				3FC8470828AC948F0020DA29 /* ThemeInfoViewController.swift */,
+				3FC029A828ACB7C7005397E3 /* ProvinceMeetViewController.swift */,
 				3F6C16B028A8E167006B1717 /* Model */,
 			);
 			path = ThemeSuggestionView;
@@ -144,6 +153,9 @@
 				3F6C16B128A936AD006B1717 /* ThemeCollectionViewCell.swift */,
 				3F6C16B728AAB87C006B1717 /* RankThemeTableViewCell.swift */,
 				3FC8470228AB725D0020DA29 /* ThemeSearchDataModel.swift */,
+				3FC8470628AC04580020DA29 /* SearchByOrderCollectionViewCell.swift */,
+				3FC029AA28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift */,
+				3FC029AC28ACEC30005397E3 /* FriendListSampleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,16 +362,20 @@
 				3F3380D928A0345000F39197 /* MakeThemeThirdViewController.swift in Sources */,
 				3FD2F14F28A3ACEB00E7C0D4 /* MakeThemeFourthViewController.swift in Sources */,
 				3F6C16B628AAA8EA006B1717 /* PopularThemeSampleModel.swift in Sources */,
+				3FC029AD28ACEC30005397E3 /* FriendListSampleModel.swift in Sources */,
 				3FD2F15128A3C99900E7C0D4 /* MakeThemeFifthViewController.swift in Sources */,
 				3F3380DD28A2040F00F39197 /* HashTagCollectionViewCell.swift in Sources */,
 				3F6C16B828AAB87C006B1717 /* RankThemeTableViewCell.swift in Sources */,
 				D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */,
 				3FC846FF28AB54A60020DA29 /* UIColorExtension.swift in Sources */,
 				3FC8470328AB725D0020DA29 /* ThemeSearchDataModel.swift in Sources */,
+				3FC029AB28ACE9CD005397E3 /* ProvinceMeetTableViewCell.swift in Sources */,
 				3F03D0D628A3D0DD002BA397 /* AddLocationViewController.swift in Sources */,
+				3FC029A928ACB7C7005397E3 /* ProvinceMeetViewController.swift in Sources */,
 				3F9E4CED289FFBB2002DE4B5 /* MakeThemeSecondViewController.swift in Sources */,
 				3F03D0D828A3DA9C002BA397 /* MakeThemeCompleteViewController.swift in Sources */,
 				3FC8470728AC04580020DA29 /* SearchByOrderCollectionViewCell.swift in Sources */,
+				3FC8470928AC948F0020DA29 /* ThemeInfoViewController.swift in Sources */,
 				D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */,
 				3F8656BC289E5D7C000909D3 /* MakeThemeFirstViewController.swift in Sources */,
 				3FC8470528AB72D90020DA29 /* ThemeModel.swift in Sources */,

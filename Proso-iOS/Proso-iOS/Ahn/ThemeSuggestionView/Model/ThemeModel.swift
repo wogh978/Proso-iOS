@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 struct ThemeModel{
     let ThemeCategory: String
     let ThemeTitle: String
@@ -35,7 +34,7 @@ func makeCellView(_ image: UIImage, _ category: String, _ title: String, _ hasht
     let cellImage = UIImageView()
     cellImage.image = image
     cellImage.clipsToBounds = true
-    cellImage.contentMode = .scaleToFill
+    cellImage.contentMode = .scaleAspectFill
     
     
     let cellCategory = UITextView()
