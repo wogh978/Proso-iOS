@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 struct ThemeModel{
     let ThemeCategory: String
