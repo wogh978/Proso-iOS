@@ -79,7 +79,6 @@ class ThemeInfoViewController: UIViewController {
         setUserInfoView()
         addView()
         setAttributes()
-        setUpNavigationBar()
         // Do any additional setup after loading the view.
     }
     

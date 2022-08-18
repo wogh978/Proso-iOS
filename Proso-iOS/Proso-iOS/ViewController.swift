@@ -17,8 +17,7 @@ class ViewController: UIViewController,MTMapViewDelegate {
 
        override func viewDidLoad() {
            super.viewDidLoad()
-           
-           view.backgroundColor = .red
+           view.backgroundColor = .white
 // MARK: - TEST
            view.addSubview(button)
            button.setTitle("TEST", for: .normal)
@@ -29,12 +28,12 @@ class ViewController: UIViewController,MTMapViewDelegate {
        }
     
     @objc private func didTapButton(){
-        let rootVC = ProvinceMeetCompletedViewController()
+        let rootVC = ThemeSuggestionMainViewController()
         self.navigationController?.pushViewController(rootVC, animated: true)
 
     }
 // MARK: - TEST
-
+    
 
 }
 

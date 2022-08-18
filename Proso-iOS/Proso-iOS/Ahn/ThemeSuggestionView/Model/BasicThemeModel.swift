@@ -14,6 +14,7 @@ struct ThemeModel{
     let ThemeHashTag: [String]
     let ThemeImage: UIImage
     
+    
     init(category: String, title: String, hashtag: [String], image: UIImage) {
         ThemeCategory = category
         ThemeTitle = title

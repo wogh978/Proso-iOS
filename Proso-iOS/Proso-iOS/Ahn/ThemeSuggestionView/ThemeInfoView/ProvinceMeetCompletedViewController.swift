@@ -63,9 +63,11 @@ class ProvinceMeetCompletedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setUpNavigationItems(items: [.back])
+        setUpNavigationBar()
         addView()
         setAttrbutes()
+        
+        view.backgroundColor = .white
 
         // Do any additional setup after loading the view.
     }
@@ -79,7 +81,7 @@ class ProvinceMeetCompletedViewController: UIViewController {
     
     private func setAttrbutes(){
         completeLabel.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(80)
+            $0.top.equalToSuperview().offset(124)
             $0.centerX.equalToSuperview()
         }
         
@@ -110,7 +112,7 @@ class ProvinceMeetCompletedViewController: UIViewController {
                                          style: .plain,
                                          target: self,
                                          action: #selector(dismissSelf))
-        navigationItem.leftBarButtonItem = backButton
+        navigationItem.backBarButtonItem = backButton
        
         view.backgroundColor = .white
         

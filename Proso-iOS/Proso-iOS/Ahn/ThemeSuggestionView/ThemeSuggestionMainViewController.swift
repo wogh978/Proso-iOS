@@ -144,7 +144,7 @@ class ThemeSuggestionMainViewController: UIViewController{
        
         collectionViewDelegate()
         //tableViewDelegate()
-        setUpNavigationBar()
+        self.navigationController?.setUpNavigationItems(items: [.logo,.add,.bell])
         setUserInfoView()
         addView()
         setAtrributes()

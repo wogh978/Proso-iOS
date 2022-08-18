@@ -62,15 +62,24 @@ class MakeThemeSecondViewController: UIViewController, UITextViewDelegate, MTMap
 // MARK: - 뷰 로드 시 작동 + 실시간 입력 글자 수
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationBar()
         addView()
         setAtrributes()
-        
-        
+        setUpNavigationBar()
+        hideKeyboardWhenTap()
 
 
         view.backgroundColor = .white
     }
+    
+    private func hideKeyboardWhenTap(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    
     
 // MARK: - AUTO LAYOUT 설정
     private func setAtrributes(){
