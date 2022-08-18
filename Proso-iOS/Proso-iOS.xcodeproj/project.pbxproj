@@ -39,7 +39,6 @@
 		3FD2F15128A3C99900E7C0D4 /* MakeThemeFifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2F15028A3C99900E7C0D4 /* MakeThemeFifthViewController.swift */; };
 		D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE98F2892AA76000C60F3 /* AppDelegate.swift */; };
 		D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE9912892AA76000C60F3 /* SceneDelegate.swift */; };
-		D45DE9942892AA76000C60F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DE9932892AA76000C60F3 /* ViewController.swift */; };
 		D45DE9992892AA77000C60F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45DE9982892AA77000C60F3 /* Assets.xcassets */; };
 		D45DE99C2892AA77000C60F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45DE99A2892AA77000C60F3 /* LaunchScreen.storyboard */; };
 		D45DE9A62892B112000C60F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9A52892B112000C60F3 /* SystemConfiguration.framework */; };
@@ -50,6 +49,22 @@
 		D45DE9B02892B141000C60F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9AF2892B13C000C60F3 /* libsqlite3.tbd */; };
 		D45DE9F92892BECA000C60F3 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9F82892BECA000C60F3 /* DaumMap.framework */; };
 		D45DE9FA2892C196000C60F3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DE9A32892B10B000C60F3 /* OpenGLES.framework */; };
+		D4892912289E2C5B00AE73ED /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892911289E2C5B00AE73ED /* UIColorExtension.swift */; };
+		D4892914289E2D3500AE73ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892913289E2D3500AE73ED /* LoginViewController.swift */; };
+		D4892916289E417B00AE73ED /* SignUpAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892915289E417B00AE73ED /* SignUpAgreementViewController.swift */; };
+		D4892918289F900600AE73ED /* SignUpNickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892917289F900600AE73ED /* SignUpNickNameViewController.swift */; };
+		D489291A289FB3A800AE73ED /* SignUpProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892919289FB3A800AE73ED /* SignUpProfileImage.swift */; };
+		D489291E289FBDAD00AE73ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489291D289FBDAD00AE73ED /* MainViewController.swift */; };
+		D4892921289FD73700AE73ED /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4892920289FD73700AE73ED /* TabBarViewController.swift */; };
+		D49F036F28ABD96500E3D308 /* AddNewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F036E28ABD96500E3D308 /* AddNewPlaceViewController.swift */; };
+		D49F038128AE1DA500E3D308 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F038028AE1DA500E3D308 /* LoginService.swift */; };
+		D49F038428AE1E1A00E3D308 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F038328AE1E1A00E3D308 /* APIConstant.swift */; };
+		D49F038628AE29EB00E3D308 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F038528AE29EB00E3D308 /* LoginModel.swift */; };
+		D4AFE60628A0F74400814689 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AFE60528A0F74400814689 /* UIViewControllerExtension.swift */; };
+		D4AFE60828A0F76000814689 /* UINavigationViewControllerExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AFE60728A0F76000814689 /* UINavigationViewControllerExtenstion.swift */; };
+		D4AFE60A28A0F77700814689 /* CommonEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AFE60928A0F77700814689 /* CommonEnum.swift */; };
+		D4AFE60E28A1011E00814689 /* RandomSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AFE60D28A1011E00814689 /* RandomSelectedViewController.swift */; };
+		D4AFE61128A1443600814689 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AFE61028A1443600814689 /* ReviewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +102,6 @@
 		D45DE98C2892AA76000C60F3 /* Proso-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Proso-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45DE98F2892AA76000C60F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D45DE9912892AA76000C60F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D45DE9932892AA76000C60F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D45DE9982892AA77000C60F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D45DE99B2892AA77000C60F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D45DE99D2892AA77000C60F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +115,22 @@
 		D45DE9F52892B1E3000C60F3 /* Proso-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Proso-Bridging-Header.h"; sourceTree = "<group>"; };
 		D45DE9F62892B4AD000C60F3 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		D45DE9F82892BECA000C60F3 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		D4892911289E2C5B00AE73ED /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		D4892913289E2D3500AE73ED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D4892915289E417B00AE73ED /* SignUpAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAgreementViewController.swift; sourceTree = "<group>"; };
+		D4892917289F900600AE73ED /* SignUpNickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNickNameViewController.swift; sourceTree = "<group>"; };
+		D4892919289FB3A800AE73ED /* SignUpProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProfileImage.swift; sourceTree = "<group>"; };
+		D489291D289FBDAD00AE73ED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D4892920289FD73700AE73ED /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		D49F036E28ABD96500E3D308 /* AddNewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceViewController.swift; sourceTree = "<group>"; };
+		D49F038028AE1DA500E3D308 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		D49F038328AE1E1A00E3D308 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		D49F038528AE29EB00E3D308 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		D4AFE60528A0F74400814689 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		D4AFE60728A0F76000814689 /* UINavigationViewControllerExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationViewControllerExtenstion.swift; sourceTree = "<group>"; };
+		D4AFE60928A0F77700814689 /* CommonEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEnum.swift; sourceTree = "<group>"; };
+		D4AFE60D28A1011E00814689 /* RandomSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSelectedViewController.swift; sourceTree = "<group>"; };
+		D4AFE61028A1443600814689 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		F60EBD28FB1A9FBB1FD1789F /* Pods-Proso-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proso-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Proso-iOS/Pods-Proso-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,11 +309,12 @@
 		D45DE98E2892AA76000C60F3 /* Proso-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3FC029B128AD0CB7005397E3 /* Common */,
-				3F6E8D5D289E300000AAA5C9 /* Ahn */,
-				D45DE98F2892AA76000C60F3 /* AppDelegate.swift */,
-				D45DE9912892AA76000C60F3 /* SceneDelegate.swift */,
-				D45DE9932892AA76000C60F3 /* ViewController.swift */,
+
+				D49F038228AE1DF300E3D308 /* NertWork */,
+				D489291F289FD72300AE73ED /* TabBarController */,
+				D4892910289E2C4100AE73ED /* Common */,
+				D489290F289E2BC500AE73ED /* Seo */,
+				D4AFE60C28A0F80800814689 /* LifeCycle */,
 				D45DE9982892AA77000C60F3 /* Assets.xcassets */,
 				D45DE99A2892AA77000C60F3 /* LaunchScreen.storyboard */,
 				D45DE99D2892AA77000C60F3 /* Info.plist */,
@@ -297,6 +328,123 @@
 				D45DE9F52892B1E3000C60F3 /* Proso-Bridging-Header.h */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		D489290F289E2BC500AE73ED /* Seo */ = {
+			isa = PBXGroup;
+			children = (
+				D49F037B28AE1CA300E3D308 /* Login */,
+				D49F036D28ABD94E00E3D308 /* AddNewPlace */,
+				D489291C289FBD9400AE73ED /* MainViewControllers */,
+				D489291B289FBBE200AE73ED /* SignUpViewControllers */,
+				D4AFE60F28A12F7F00814689 /* RandomSelectedViewController */,
+			);
+			path = Seo;
+			sourceTree = "<group>";
+		};
+		D4892910289E2C4100AE73ED /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D4892911289E2C5B00AE73ED /* UIColorExtension.swift */,
+				D4AFE60528A0F74400814689 /* UIViewControllerExtension.swift */,
+				D4AFE60728A0F76000814689 /* UINavigationViewControllerExtenstion.swift */,
+				D4AFE60928A0F77700814689 /* CommonEnum.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D489291B289FBBE200AE73ED /* SignUpViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4892915289E417B00AE73ED /* SignUpAgreementViewController.swift */,
+				D4892917289F900600AE73ED /* SignUpNickNameViewController.swift */,
+				D4892919289FB3A800AE73ED /* SignUpProfileImage.swift */,
+			);
+			path = SignUpViewControllers;
+			sourceTree = "<group>";
+		};
+		D489291C289FBD9400AE73ED /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D489291D289FBDAD00AE73ED /* MainViewController.swift */,
+			);
+			path = MainViewControllers;
+			sourceTree = "<group>";
+		};
+		D489291F289FD72300AE73ED /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				D4892920289FD73700AE73ED /* TabBarViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		D49F036D28ABD94E00E3D308 /* AddNewPlace */ = {
+			isa = PBXGroup;
+			children = (
+				D49F036E28ABD96500E3D308 /* AddNewPlaceViewController.swift */,
+			);
+			path = AddNewPlace;
+			sourceTree = "<group>";
+		};
+		D49F037B28AE1CA300E3D308 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D49F037F28AE1CCD00E3D308 /* Service */,
+				D49F037E28AE1CC700E3D308 /* Model */,
+				D49F037C28AE1CAE00E3D308 /* ViewController */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D49F037C28AE1CAE00E3D308 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D4892913289E2D3500AE73ED /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D49F037E28AE1CC700E3D308 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D49F038528AE29EB00E3D308 /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D49F037F28AE1CCD00E3D308 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D49F038028AE1DA500E3D308 /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D49F038228AE1DF300E3D308 /* NertWork */ = {
+			isa = PBXGroup;
+			children = (
+				D49F038328AE1E1A00E3D308 /* APIConstant.swift */,
+			);
+			path = NertWork;
+			sourceTree = "<group>";
+		};
+		D4AFE60C28A0F80800814689 /* LifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				D45DE98F2892AA76000C60F3 /* AppDelegate.swift */,
+				D45DE9912892AA76000C60F3 /* SceneDelegate.swift */,
+			);
+			path = LifeCycle;
+			sourceTree = "<group>";
+		};
+		D4AFE60F28A12F7F00814689 /* RandomSelectedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D4AFE60D28A1011E00814689 /* RandomSelectedViewController.swift */,
+				D4AFE61028A1443600814689 /* ReviewTableViewCell.swift */,
+			);
+			path = RandomSelectedViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				3FC846FD28AB51BC0020DA29 /* ThemeSuggestionSearchViewController.swift in Sources */,
 				3FC029AF28ACF61F005397E3 /* ProvinceMeetCompletedViewController.swift in Sources */,
 				3F3380D928A0345000F39197 /* MakeThemeThirdViewController.swift in Sources */,
@@ -445,6 +594,24 @@
 				D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */,
 				3FC029B528AD0CEE005397E3 /* UINavigationViewControllerExtension.swift in Sources */,
 				3F6C16AF28A8E02F006B1717 /* RisingThemeSampleModel.swift in Sources */,
+				D4892918289F900600AE73ED /* SignUpNickNameViewController.swift in Sources */,
+				D4AFE60A28A0F77700814689 /* CommonEnum.swift in Sources */,
+				D45DE9902892AA76000C60F3 /* AppDelegate.swift in Sources */,
+				D4AFE60828A0F76000814689 /* UINavigationViewControllerExtenstion.swift in Sources */,
+				D4AFE61128A1443600814689 /* ReviewTableViewCell.swift in Sources */,
+				D4AFE60E28A1011E00814689 /* RandomSelectedViewController.swift in Sources */,
+				D45DE9922892AA76000C60F3 /* SceneDelegate.swift in Sources */,
+				D49F038128AE1DA500E3D308 /* LoginService.swift in Sources */,
+				D4892916289E417B00AE73ED /* SignUpAgreementViewController.swift in Sources */,
+				D489291A289FB3A800AE73ED /* SignUpProfileImage.swift in Sources */,
+				D489291E289FBDAD00AE73ED /* MainViewController.swift in Sources */,
+				D49F038428AE1E1A00E3D308 /* APIConstant.swift in Sources */,
+				D4892914289E2D3500AE73ED /* LoginViewController.swift in Sources */,
+				D49F038628AE29EB00E3D308 /* LoginModel.swift in Sources */,
+				D4892921289FD73700AE73ED /* TabBarViewController.swift in Sources */,
+				D4AFE60628A0F74400814689 /* UIViewControllerExtension.swift in Sources */,
+				D49F036F28ABD96500E3D308 /* AddNewPlaceViewController.swift in Sources */,
+				D4892912289E2C5B00AE73ED /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +775,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -655,6 +823,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
