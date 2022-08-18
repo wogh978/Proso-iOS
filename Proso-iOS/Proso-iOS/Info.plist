@@ -11,6 +11,7 @@
 	<string>Light</string>
 	<key>KAKAO_APP_KEY</key>
 	<string>5e3d32091e3373df2d18e586f8b5f182</string>
+
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -22,6 +23,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>KAKAO_APP_KEY</key>
+	<string>5e3d32091e3373df2d18e586f8b5f182</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
