@@ -32,15 +32,15 @@ class TabBarViewController: UITabBarController {
         let navController = UINavigationController(rootViewController: item.viewController)
         navController.tabBarItem.title = item.displayTitle
         navController.tabBarItem.image = item.icon
-        navController
         return navController
     }
     
     // MARK: Private methods
-
+    //(0.0, 877.0, 428.0, 49.0)
+    //(0.0, 763.0, 375.0, 49.0)
     private func addCustomTabBarView() {
         self.customTabBarView.frame = tabBar.frame
-        
+        print(tabBar.frame)
         self.tabBar.backgroundColor = .white
         self.tabBar.layer.cornerRadius = 30
         self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]

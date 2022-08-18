@@ -12,7 +12,12 @@ class RandomSelectedViewController: UIViewController {
     
     var scrollView = UIScrollView()
     let contentView = UIView()
-    let mapView = MTMapView()
+    let mapView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .red
+        
+        return view
+    }()
     let infoView = UIView()
     let kindOfStoreLabel: UILabel = {
         let label = UILabel()

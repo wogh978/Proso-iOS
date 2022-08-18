@@ -29,7 +29,7 @@ class SignUpAgreementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "회원가입"
-        self.navigationController?.setUpNavigationItems(items: [.back])
+        self.navigationController?.setUpNavigationItems(items: [.back, .bell])
         layout()
         attributes()
     }

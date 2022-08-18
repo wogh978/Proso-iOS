@@ -12,10 +12,11 @@ class MainViewController: UIViewController {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        let font = UIFont.systemFont(ofSize: 24)
+        //let font = UIFont.systemFont(ofSize: 24)
         label.text = "효빈님, 오늘은 \n 어떤 즉흥적인 일이 생길까요?"
+        label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 24)
+       // label.font = UIFont.systemFont(ofSize: 24)
         label.textColor = .black
         return label
     }()
@@ -57,8 +58,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setUpNavigationItems(items: [.logo, .bell])
-            
+        self.navigationController?.setUpNavigationItems(items: [.logo, .bell,.delete])
         layout()
         attributes()
     }
@@ -66,6 +66,17 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        titleLabel.heightAnchor.constraint(equalTo: titleLabel.widthAnchor, multiplier: 70/293).isActive = true
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.numberOfLines = 0
     }
     
     private func attributes() {
@@ -86,6 +97,7 @@ class MainViewController: UIViewController {
         rightButton.addTarget(self, action: #selector(tapRightButton(_:)), for: .touchUpInside)
     }
     
+    
     private func layout() {
         [titleLabel, collectionView, leftButton, rightButton, subInfoLabel, infoLabel].forEach {
             view.addSubview($0)
@@ -93,13 +105,15 @@ class MainViewController: UIViewController {
         
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide).offset(40)
-            $0.leading.trailing.equalToSuperview().inset(40)
+            $0.leading.equalToSuperview().inset(20)
+            $0.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(view.frame.width * ( 70 / 375))
         }
         
         collectionView.snp.makeConstraints{
             $0.top.equalTo(titleLabel.snp.bottom).offset(32)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(view.frame.width * 277 / 375)
+            $0.height.equalTo((view.frame.width - 164) * (277 / 211) )
         }
         
         leftButton.snp.makeConstraints{

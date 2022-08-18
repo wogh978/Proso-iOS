@@ -1,8 +1,10 @@
 
 import UIKit
 import SnapKit
+import KakaoSDKUser
 
 class LoginViewController: UIViewController {
+    
     let subTitle = "이제야 보이세요?"
     let mainPreFixTitle = "P로소"
     let mainPostFixTitle = "보이는 것들"
@@ -42,9 +44,11 @@ class LoginViewController: UIViewController {
         let tapKaKaoLoginButton = UITapGestureRecognizer(target: self, action: #selector(tapKakaoLoginButtion(_:)))
         kakaoLoginButton.addGestureRecognizer(tapKaKaoLoginButton)
         kakaoLoginButton.isUserInteractionEnabled = true
-        
-        appleLoginButton.image = UIImage(named: "login_apple")
+        kakaoLoginButton.heightAnchor.constraint(equalTo: kakaoLoginButton.widthAnchor, multiplier: 56.0/335.0).isActive = true
         kakaoLoginButton.contentMode = .scaleToFill
+        
+        appleLoginButton.heightAnchor.constraint(equalTo: appleLoginButton.widthAnchor, multiplier: 56.0/335.0).isActive = true
+        appleLoginButton.image = UIImage(named: "login_apple")
     }
     
     private func layout() {
@@ -76,23 +80,24 @@ class LoginViewController: UIViewController {
             $0.trailing.equalToSuperview().inset(67)
         }
         
-        kakaoLoginButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.height.equalTo(56)
-            $0.bottom.equalToSuperview().inset(162)
-            $0.width.equalTo(view.frame.width - 40)
+        appleLoginButton.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.bottom.equalToSuperview().inset(90)
         }
         
-        appleLoginButton.snp.makeConstraints {
-            $0.top.equalTo(kakaoLoginButton.snp.bottom).offset(16)
-            $0.height.equalTo(56)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(view.frame.width - 40)
+        kakaoLoginButton.snp.makeConstraints {
+            $0.bottom.equalTo(appleLoginButton.snp.top).offset(-16)
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
     }
     
     @objc private func tapKakaoLoginButtion(_ sender: UITapGestureRecognizer) {
-        let nextVC = SignUpAgreementViewController()
-        self.navigationController?.pushViewController(nextVC, animated: false)
+        LoginService.shared.kakaoLogin() {
+            let vc = TabBarViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: false)
+        }
     }
+    
+        
 }

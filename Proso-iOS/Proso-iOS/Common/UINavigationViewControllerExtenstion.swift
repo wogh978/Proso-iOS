@@ -8,6 +8,10 @@
 import UIKit
 
 extension UINavigationController {
+    @objc func tappedBell(_ sender: Any){
+        self.pushViewController(UIViewController(), animated: true)
+    }
+    
     func setUpNavigationItems(items: [NaviagtionBarItems]) {
         var leftitems = [UIBarButtonItem]()
         var rightitems = [UIBarButtonItem]()
@@ -26,7 +30,13 @@ extension UINavigationController {
                 navigationBar.tintColor = .black
                 navigationBar.backItem?.title = ""
             case .bell:
-                let buttonItem = UIBarButtonItem(customView: UIImageView(image: item.image))
+                let vc = UIImageView(image: item.image)
+                let g = UITapGestureRecognizer(target: self, action: #selector(tappedBell(_:)))
+                vc.addGestureRecognizer(g)
+                vc.isUserInteractionEnabled = true
+                
+                let buttonItem = UIBarButtonItem(customView: vc)
+
                 rightitems.append(buttonItem)
             case .add:
                 let buttonItem = UIBarButtonItem(customView: UIImageView(image: item.image))
@@ -39,7 +49,6 @@ extension UINavigationController {
                 rightitems.append(buttonItem)
             }
         }
-        
         let height = self.view.safeAreaInsets.bottom
         
         var tabFrame = self.navigationBar.frame
