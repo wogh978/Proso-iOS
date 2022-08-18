@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class MakeThemeFirstViewController: UIViewController, UITextFieldDelegate, MTMapViewDelegate{
+class MakeThemeFirstViewController: UIViewController, MTMapViewDelegate{
         
     var mapview: MTMapView!
     
@@ -76,17 +76,29 @@ class MakeThemeFirstViewController: UIViewController, UITextFieldDelegate, MTMap
     }()
     
 // MARK: - 뷰 로드 시 작동 + 실시간 입력 글자 수
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setUpNavigationItems(items: [.back])
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationBar()
         addView()
         setAtrributes()
+        hideKeyboardWhenTap()
         
-        
-
-
         view.backgroundColor = .white
     }
+    
+    private func hideKeyboardWhenTap(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+    
     
 // MARK: - AUTO LAYOUT 설정
     private func setAtrributes(){
@@ -140,17 +152,7 @@ class MakeThemeFirstViewController: UIViewController, UITextFieldDelegate, MTMap
         inputField.delegate = self ///입력 칸 글자 수 카운트를 위한 delegate 설정
     }
     
-    private func setUpNavigationBar() {
-        title = "테마 만들기"
-        let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward")?
-                                        .withTintColor(.black, renderingMode: .alwaysOriginal),
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(dismissSelf))
-        navigationItem.leftBarButtonItem = backButton
-        
-        ///그림자 추가하려고 하면 자꾸 글자 쪽에 추가되는 바람에 일단 보류.
-    }
+   
     
     @objc func dismissSelf(){
         dismiss(animated: true, completion: nil)
@@ -187,4 +189,11 @@ class MakeThemeFirstViewController: UIViewController, UITextFieldDelegate, MTMap
         navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: false)
     }
+}
+
+extension MakeThemeFirstViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      self.view.endEditing(true)
+      return false
+  }
 }

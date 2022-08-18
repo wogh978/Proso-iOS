@@ -75,19 +75,13 @@ class ThemeSuggestionMainViewController: UIViewController{
         return label
     }()
     
-    let risingThemeInfoView = UIView()
-    
-    let risingThemeInfoCell: UIView = {
-        let risingThemeSample = RisingThemeSampleModel()
-        
-        let image = risingThemeSample.risingTheme.ThemeImage 
-        let title = risingThemeSample.risingTheme.ThemeTitle
-        let category = risingThemeSample.risingTheme.ThemeCategory
-        let hashtag = risingThemeSample.risingTheme.ThemeHashTag
-        
-        let view = makeCellView(image, category, title, hashtag)
-        return view
+    let risingThemeInfoView: UITableView = {
+        let tableView = UITableView()
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        return tableView
     }()
+    
     
     let popularThemeSectionLabel: UILabel = {
         let label = UILabel()
@@ -143,9 +137,8 @@ class ThemeSuggestionMainViewController: UIViewController{
         
        
         collectionViewDelegate()
-        //tableViewDelegate()
+        tableViewDelegate()
         setUpNavigationBar()
-        setUserInfoView()
         addView()
         setAtrributes()
         
@@ -158,15 +151,15 @@ class ThemeSuggestionMainViewController: UIViewController{
         popularThemeCollectionView.register(ThemeCollectionViewCell.self, forCellWithReuseIdentifier: ThemeCollectionViewCell.identifier)
     }
     
-    /*private func tableViewDelegate(){
-        popularThemeRankView.delegate = self
-        popularThemeRankView.dataSource = self
-        popularThemeRankView.register(RankThemeTableViewCell.classForCoder(), forCellReuseIdentifier: "cellIdentifier")
-    }*/
+    private func tableViewDelegate(){
+        risingThemeInfoView.delegate = self
+        risingThemeInfoView.dataSource = self
+        risingThemeInfoView.register(RisingThemeTableViewCell.classForCoder(), forCellReuseIdentifier: "cellIdentifier")
+    }
     
    
     private func addView(){
-        [searchField,risingThemeSectionLabel,risingThemeIntroduction,risingThemeInfoView, risingThemeInfoCell,popularThemeSectionLabel,popularThemeIntroduction,popularThemeCollectionView, popularThemeRankLabel].forEach({
+        [searchField,risingThemeSectionLabel,risingThemeIntroduction,risingThemeInfoView,popularThemeSectionLabel,popularThemeIntroduction,popularThemeCollectionView, popularThemeRankLabel].forEach({
             contentView.addSubview($0)
         })
         mainScrollView.addSubview(contentView)
@@ -205,16 +198,11 @@ class ThemeSuggestionMainViewController: UIViewController{
             $0.top.equalTo(risingThemeIntroduction.snp.bottom).offset(24)
         }
         
-        risingThemeInfoView.heightAnchor.constraint(equalTo: risingThemeInfoView.widthAnchor, multiplier: 42/335).isActive = true
+        risingThemeInfoView.heightAnchor.constraint(equalTo: risingThemeInfoView.widthAnchor, multiplier: 584/335).isActive = true
         
-        risingThemeInfoCell.snp.makeConstraints{
-            $0.leading.trailing.equalToSuperview().inset(20)
-            $0.top.equalTo(risingThemeInfoView.snp.bottom).offset(16)
-        }
-        risingThemeInfoCell.heightAnchor.constraint(equalTo: risingThemeInfoCell.widthAnchor, multiplier: 234/335).isActive = true
         
         popularThemeSectionLabel.snp.makeConstraints{
-            $0.top.equalTo(risingThemeInfoCell.snp.bottom).offset(48)
+            $0.top.equalTo(risingThemeInfoView.snp.bottom).offset(24)
             $0.leading.equalToSuperview().inset(20)
         }
         
@@ -243,24 +231,20 @@ class ThemeSuggestionMainViewController: UIViewController{
     
     private func setUpNavigationBar() {
         
-        let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward")?
-            .withTintColor(.black, renderingMode: .alwaysOriginal),
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(dismissSelf))
-        navigationItem.leftBarButtonItem = backButton
+        let logo = UIBarButtonItem(customView: UIImageView(image: UIImage (named: "image_navigationbar logo re")))
+        logo.tintColor = UIColor.primaryColor
+        navigationItem.leftBarButtonItem = logo
         
-        let makeThemeButton = UIBarButtonItem(image: UIImage(systemName: "plus.circle")?
-            .withTintColor(.black, renderingMode: .alwaysOriginal),
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(gotoMakeTheme))
+        let makeThemeButton = UIBarButtonItem(customView: UIImageView(image: UIImage(systemName: "plus.circle")?.withRenderingMode(.alwaysTemplate)).tintColor = .black)
+        makeThemeButton.tintColor = .black
+        makeThemeButton.action = #selector(gotoMakeTheme)
         
-        let notificationButton = UIBarButtonItem(image: UIImage(systemName: "bell.badge")?
-            .withTintColor(.black, renderingMode: .alwaysOriginal),
-                                         style: .plain,
-                                         target: self,
-                                         action: nil)
+        let notificationButton = UIBarButtonItem(customView: UIImageView(image: UIImage(systemName: "bell.badge")?.withRenderingMode(.alwaysTemplate)).tintColor = .black)
+        notificationButton.tintColor = .black
+        
+        makeThemeButton.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        notificationButton.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+
         navigationItem.rightBarButtonItems = [notificationButton,makeThemeButton]
         view.backgroundColor = .white
         
@@ -275,78 +259,6 @@ class ThemeSuggestionMainViewController: UIViewController{
         let rootVC = MakeThemeFirstViewController()
         self.navigationController?.pushViewController(rootVC, animated: true)
     }
-    private func setUserInfoView(){
-        let risingTheme = RisingThemeSampleModel()
-        
-        let profileImage = UIImageView()
-        let image = risingTheme.getRisingThemeUserInfo("profile") as! UIImage
-        profileImage.clipsToBounds = true
-        profileImage.contentMode = .scaleAspectFill
-        profileImage.image = image
-        profileImage.backgroundColor = #colorLiteral(red: 0.9593991637, green: 0.9593990445, blue: 0.9593990445, alpha: 1)
-        profileImage.layer.cornerRadius = 22.5
-        
-        
-        let themeLabel = UILabel()
-        let username = risingTheme.getRisingThemeUserInfo("username") as! String
-        let att = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)]
-        let boldedUsername = NSMutableAttributedString(string: username, attributes: att).string
-        themeLabel.text = boldedUsername + "님의 테마"
-        themeLabel.font = .systemFont(ofSize: 14.0)
-        
-        let heart = UIImageView()
-        heart.image = UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate)
-        heart.tintColor = #colorLiteral(red: 1, green: 0.4265864491, blue: 0.4015736282, alpha: 1)
-        
-        let heartCount = UILabel()
-        heartCount.text = String(risingTheme.getRisingThemeUserInfo("heartcount") as! Int)
-        heartCount.font = UIFont.systemFont(ofSize: 12.0)
-        heartCount.textColor = #colorLiteral(red: 0.4756370187, green: 0.4756369591, blue: 0.4756369591, alpha: 1)
-        
-        
-        let moreInfo = UIImageView()
-        
-        moreInfo.image = UIImage(named: "moreInfo_arrow")?.withRenderingMode(.alwaysTemplate)
-        moreInfo.tintColor = #colorLiteral(red: 0.08947802335, green: 0.08947802335, blue: 0.08947802335, alpha: 1)
-        
-        [profileImage,themeLabel,heart,heartCount,moreInfo].forEach({
-            risingThemeInfoView.addSubview($0)
-        })
-        // MARK: - make Constraints
-        
-        profileImage.snp.makeConstraints{
-            $0.leading.equalToSuperview()
-            $0.height.equalToSuperview()
-            $0.width.equalTo(profileImage.snp.height)
-        }
-        
-        themeLabel.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(3)
-            $0.leading.equalTo(profileImage.snp.trailing).offset(10)
-        }
-        
-        heart.snp.makeConstraints{
-            $0.leading.equalTo(themeLabel.snp.leading)
-            $0.bottom.equalToSuperview().inset(2)
-            $0.width.equalTo(16.15)
-            $0.height.equalTo(13.98)///
-        }
-        
-        heartCount.snp.makeConstraints{
-            $0.leading.equalTo(heart.snp.trailing).offset(4.92)
-            $0.bottom.equalToSuperview().inset(2)
-            
-        }
-        
-        moreInfo.snp.makeConstraints{
-            $0.trailing.equalToSuperview().inset(7.28)
-            $0.centerY.equalToSuperview()
-            $0.height.equalToSuperview().multipliedBy(16.22/42)
-        }
-        moreInfo.widthAnchor.constraint(equalTo: moreInfo.heightAnchor, multiplier: 9.47/16.22).isActive = true
-        
-    }
-    
 
 }
 
@@ -378,24 +290,20 @@ extension ThemeSuggestionMainViewController: UICollectionViewDelegateFlowLayout 
 
 }
 
-/*extension ThemeSuggestionMainViewController: UITableViewDelegate, UITableViewDataSource {
+extension ThemeSuggestionMainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rankTheme.SampleRank.count
+        return 2
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = popularThemeRankView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! RankThemeTableViewCell
-        cell.rankImg.image = rankTheme.SampleRank[indexPath.row].themeImage
-        cell.rankHeartCount.text = String(rankTheme.SampleRank[indexPath.row].themeHeartCount)
-        cell.rankTitle.text = rankTheme.SampleRank[indexPath.row].themeTitle
-        cell.rankLabel.text = String(indexPath.row+1)
+        let cell = risingThemeInfoView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! RisingThemeTableViewCell
         
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.width * 64/375
+        return view.frame.width * 292/375
     }
     
-}*/
+}
